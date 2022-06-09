@@ -256,3 +256,15 @@ html {
   padding-top: 100px;
   height: 420px;
 }
+
+.russia {
+  color: blue;
+}
+
+.belarus {
+  color: red;
+}
+
+.ukraine {
+  color: rgb(153, 153, 13);
+}
