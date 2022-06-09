@@ -104,16 +104,386 @@ async function getData() {
       if (dataFl[i].gameMode == "1" && dataFl[i].race == "4") {
         document.querySelector(".mmrFla").innerHTML = dataFl[i].mmr;
       }
+      if (document.querySelector(".mmrFla").innerHTML == "0") {
+        y = y - 1;
+      }
     }
-    /*     if (document.querySelector(".mmrFla").innerHTML == "0") {
-      y = y - 1;
-      seas();
-    } */
   };
 
   seas();
-
-  console.log(y);
 }
 
 getData();
+
+let urlPtenSumOne =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=0&pageSize=300&season=11";
+
+let urlPtenSumTwo =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=100&pageSize=300&season=11";
+
+let urlPtenSumThree =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=200&pageSize=300&season=11";
+
+let urlPtenSumFour =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=300&pageSize=300&season=11";
+
+//ilisori
+let urlIllisoriOne =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=Illisori%232201&gateway=20&offset=0&pageSize=300&season=11";
+
+//draniq
+
+let urlDraniqOne =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=0&pageSize=300&season=11";
+let urlDraniqTwo =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=100&pageSize=300&season=11";
+let urlDraniqThree =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=200&pageSize=300&season=11";
+let urlDraniqFour =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=300&pageSize=300&season=11";
+
+//vama
+
+let urlVamaOne =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=vama%2321920&gateway=20&offset=0&pageSize=300&season=11&gameMode=1";
+
+//Fingon
+
+let urlFingonOne =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=KawerOrda%232648&gateway=20&offset=0&pageSize=300&season=11";
+let urlFingonTwo =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=KawerOrda%232648&gateway=20&offset=100&pageSize=300&season=11";
+
+//trident
+
+let urlTridentOne =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=tRid3nt%232910&gateway=20&offset=0&pageSize=300&season=11&gamemode=1";
+
+let urlPtenSum6 =
+  "https://website-backend.w3champions.com/api/players/Flamy4%232811/mmr-rp-timeline?race=4&gateWay=20&season=11&gameMode=1;";
+
+async function getDataPteN() {
+  const resPtenSum = await fetch(urlPtenSumOne);
+  const resPtenSumTwo = await fetch(urlPtenSumTwo);
+  const resPtenSumThree = await fetch(urlPtenSumThree);
+
+  const dataPteNSum = await resPtenSum.json();
+  const dataPteNSumTwo = await resPtenSumTwo.json();
+  const dataPteNSumThree = await resPtenSumThree.json();
+
+  console.log(dataPteNSumThree);
+  let array = [];
+
+  for (let i = 0; i < dataPteNSum.matches.length; i++) {
+    if (
+      dataPteNSum.matches[i].teams[0].players[0].battleTag == "PteN#21803" &&
+      dataPteNSum.matches[i].gameMode == "1"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSum.matches[i].teams[1].players[0].battleTag == "PteN#21803" &&
+      dataPteNSum.matches[i].gameMode == "1"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  for (let i = 0; i < dataPteNSumTwo.matches.length; i++) {
+    if (
+      dataPteNSumTwo.matches[i].teams[0].players[0].battleTag == "PteN#21803" &&
+      dataPteNSumTwo.matches[i].gameMode == "1"
+    ) {
+      array.push(dataPteNSumTwo.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSumTwo.matches[i].teams[1].players[0].battleTag == "PteN#21803" &&
+      dataPteNSumTwo.matches[i].gameMode == "1"
+    ) {
+      array.push(dataPteNSumTwo.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  for (let i = 0; i < dataPteNSumThree.matches.length; i++) {
+    if (
+      dataPteNSumThree.matches[i].teams[0].players[0].battleTag ==
+        "PteN#21803" &&
+      dataPteNSumThree.matches[i].gameMode == "1"
+    ) {
+      array.push(dataPteNSumThree.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSumThree.matches[i].teams[1].players[0].battleTag ==
+        "PteN#21803" &&
+      dataPteNSumThree.matches[i].gameMode == "1"
+    ) {
+      array.push(dataPteNSumThree.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  document.querySelector(".mmr-min-PteN").innerHTML = Math.min.apply(
+    null,
+    array
+  );
+
+  document.querySelector(".mmr-max-PteN").innerHTML = Math.max.apply(
+    null,
+    array
+  );
+
+  document.querySelector(".mmr-av-PteN").innerHTML =
+    (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+
+  console.log(Math.min.apply(null, array));
+  console.log(Math.max.apply(null, array));
+  console.log(array);
+}
+
+getDataPteN();
+
+//ilisori
+async function getDataIllisori() {
+  const resPtenSum = await fetch(urlIllisoriOne);
+
+  const dataPteNSum = await resPtenSum.json();
+
+  let array = [];
+
+  for (let i = 0; i < dataPteNSum.matches.length; i++) {
+    if (
+      dataPteNSum.matches[i].teams[0].players[0].battleTag == "Illisori#2201" &&
+      dataPteNSum.matches[i].gameMode == "1"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSum.matches[i].teams[1].players[0].battleTag == "Illisori#2201" &&
+      dataPteNSum.matches[i].gameMode == "1"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  document.querySelector(".mmr-min-il").innerHTML = Math.min.apply(null, array);
+
+  document.querySelector(".mmr-max-il").innerHTML = Math.max.apply(null, array);
+
+  document.querySelector(".mmr-av-il").innerHTML =
+    (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+}
+
+getDataIllisori();
+
+async function getDataDraniq() {
+  const resPtenSum = await fetch(urlDraniqOne);
+  const resPtenSumTwo = await fetch(urlDraniqTwo);
+  const resPtenSumThree = await fetch(urlDraniqThree);
+  const resPtenSumFour = await fetch(urlDraniqFour);
+
+  const dataPteNSum = await resPtenSum.json();
+  const dataPteNSumTwo = await resPtenSumTwo.json();
+  const dataPteNSumThree = await resPtenSumThree.json();
+  const dataPteNSumFour = await resPtenSumFour.json();
+
+  let array = [];
+
+  for (let i = 0; i < dataPteNSum.matches.length; i++) {
+    if (
+      dataPteNSum.matches[i].teams[0].players[0].battleTag ==
+        "draniqBLR#2779" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[0].players[0].race == "2"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSum.matches[i].teams[1].players[0].battleTag ==
+        "draniqBLR#2779" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[1].players[0].race == "2"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  for (let i = 0; i < dataPteNSumTwo.matches.length; i++) {
+    if (
+      dataPteNSumTwo.matches[i].teams[0].players[0].battleTag ==
+        "draniqBLR#2779" &&
+      dataPteNSumTwo.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[0].players[0].race == "2"
+    ) {
+      array.push(dataPteNSumTwo.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSumTwo.matches[i].teams[1].players[0].battleTag ==
+        "draniqBLR#2779" &&
+      dataPteNSumTwo.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[1].players[0].race == "2"
+    ) {
+      array.push(dataPteNSumTwo.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  for (let i = 0; i < dataPteNSumThree.matches.length; i++) {
+    if (
+      dataPteNSumThree.matches[i].teams[0].players[0].battleTag ==
+        "draniqBLR#2779" &&
+      dataPteNSumThree.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[0].players[0].race == "2"
+    ) {
+      array.push(dataPteNSumThree.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSumThree.matches[i].teams[1].players[0].battleTag ==
+        "draniqBLR#2779" &&
+      dataPteNSumThree.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[1].players[0].race == "2"
+    ) {
+      array.push(dataPteNSumThree.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  document.querySelector(".mmr-min-dr").innerHTML = Math.min.apply(null, array);
+
+  document.querySelector(".mmr-max-dr").innerHTML = Math.max.apply(null, array);
+  document.querySelector(".mmr-av-dr").innerHTML =
+    (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+}
+
+getDataDraniq();
+
+//vama
+
+async function getDataVama() {
+  const resPtenSum = await fetch(urlVamaOne);
+
+  const dataPteNSum = await resPtenSum.json();
+
+  let array = [];
+
+  for (let i = 0; i < dataPteNSum.matches.length; i++) {
+    if (
+      dataPteNSum.matches[i].teams[0].players[0].battleTag == "vama#21920" &&
+      dataPteNSum.matches[i].gameMode == "1"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSum.matches[i].teams[1].players[0].battleTag == "vama#21920" &&
+      dataPteNSum.matches[i].gameMode == "1"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  document.querySelector(".mmr-min-va").innerHTML = Math.min.apply(null, array);
+
+  document.querySelector(".mmr-max-va").innerHTML = Math.max.apply(null, array);
+
+  document.querySelector(".mmr-av-va").innerHTML =
+    (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+}
+
+getDataVama();
+
+//vama
+
+async function getDataFingon() {
+  const resPtenSum = await fetch(urlFingonOne);
+  const resPtenSumTwo = await fetch(urlFingonTwo);
+
+  const dataPteNSum = await resPtenSum.json();
+  const dataPteNSumTwo = await resPtenSumTwo.json();
+
+  let array = [];
+
+  for (let i = 0; i < dataPteNSum.matches.length; i++) {
+    if (
+      dataPteNSum.matches[i].teams[0].players[0].battleTag ==
+        "KawerOrda#2648" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[0].players[0].race == "4"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSum.matches[i].teams[1].players[0].battleTag ==
+        "KawerOrda#2648" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[1].players[0].race == "4"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  for (let i = 0; i < dataPteNSumTwo.matches.length; i++) {
+    if (
+      dataPteNSumTwo.matches[i].teams[0].players[0].battleTag ==
+        "KawerOrda#2648" &&
+      dataPteNSumTwo.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[0].players[0].race == "4"
+    ) {
+      array.push(dataPteNSumTwo.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSumTwo.matches[i].teams[1].players[0].battleTag ==
+        "KawerOrda#2648" &&
+      dataPteNSumTwo.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[1].players[0].race == "4"
+    ) {
+      array.push(dataPteNSumTwo.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  document.querySelector(".mmr-min-fin").innerHTML = Math.min.apply(
+    null,
+    array
+  );
+
+  document.querySelector(".mmr-max-fin").innerHTML = Math.max.apply(
+    null,
+    array
+  );
+
+  document.querySelector(".mmr-av-fin").innerHTML =
+    (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+}
+
+getDataFingon();
+
+//trident
+
+async function getDataTrident() {
+  const resPtenSum = await fetch(urlTridentOne);
+
+  const dataPteNSum = await resPtenSum.json();
+
+  let array = [];
+
+  for (let i = 0; i < dataPteNSum.matches.length; i++) {
+    if (
+      dataPteNSum.matches[i].teams[0].players[0].battleTag == "tRid3nt#2910" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[0].players[0].race == "2"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSum.matches[i].teams[1].players[0].battleTag == "tRid3nt#2910" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[1].players[0].race == "2"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  document.querySelector(".mmr-min-tr").innerHTML = Math.min.apply(null, array);
+
+  document.querySelector(".mmr-max-tr").innerHTML = Math.max.apply(null, array);
+
+  document.querySelector(".mmr-av-tr").innerHTML =
+    (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+}
+
+getDataTrident();
