@@ -124,8 +124,8 @@ let urlPtenSumTwo =
 let urlPtenSumThree =
   "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=200&pageSize=300&season=11";
 
-let urlPtenSumFour =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=300&pageSize=300&season=11";
+/* let urlPtenSumFour =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=300&pageSize=300&season=11"; */
 
 //ilisori
 let urlIllisoriOne =
@@ -139,8 +139,8 @@ let urlDraniqTwo =
   "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=100&pageSize=300&season=11";
 let urlDraniqThree =
   "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=200&pageSize=300&season=11";
-let urlDraniqFour =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=300&pageSize=300&season=11";
+/* let urlDraniqFour =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=300&pageSize=300&season=11"; */
 
 //vama
 
@@ -158,9 +158,6 @@ let urlFingonTwo =
 
 let urlTridentOne =
   "https://website-backend.w3champions.com/api/matches/search?playerId=tRid3nt%232910&gateway=20&offset=0&pageSize=300&season=11&gamemode=1";
-
-let urlPtenSum6 =
-  "https://website-backend.w3champions.com/api/players/Flamy4%232811/mmr-rp-timeline?race=4&gateWay=20&season=11&gameMode=1;";
 
 async function getDataPteN() {
   const resPtenSum = await fetch(urlPtenSumOne);
@@ -278,12 +275,12 @@ async function getDataDraniq() {
   const resPtenSum = await fetch(urlDraniqOne);
   const resPtenSumTwo = await fetch(urlDraniqTwo);
   const resPtenSumThree = await fetch(urlDraniqThree);
-  const resPtenSumFour = await fetch(urlDraniqFour);
+  /*   const resPtenSumFour = await fetch(urlDraniqFour); */
 
   const dataPteNSum = await resPtenSum.json();
   const dataPteNSumTwo = await resPtenSumTwo.json();
   const dataPteNSumThree = await resPtenSumThree.json();
-  const dataPteNSumFour = await resPtenSumFour.json();
+  /*   const dataPteNSumFour = await resPtenSumFour.json(); */
 
   let array = [];
 
