@@ -1,7 +1,7 @@
 //close modal window
 
 const btnClose = document.querySelector(".btn-close");
-const overlay = document.getElementById("overlay");
+/* const overlay = document.getElementById("overlay"); */
 const modalResult = document.getElementById("modal-result-container");
 
 const closeModal = () => {
