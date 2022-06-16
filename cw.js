@@ -170,8 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //close modal window
 
-const btnClose = document.querySelector(".btn-close");
-/* const overlay = document.getElementById('overlay'); */
+/* const btnClose = document.querySelector(".btn-close");
+
 const modalResult = document.getElementById("modal-result-container");
 
 const closeModal = () => {
@@ -183,4 +183,4 @@ const closeModal = () => {
   }
 };
 
-btnClose.addEventListener("click", closeModal);
+btnClose.addEventListener("click", closeModal); */
