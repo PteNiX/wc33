@@ -43,6 +43,8 @@ let urlTrident = `https://website-backend.w3champions.com/api/players/tRid3nt%23
 
 let urlFlamy4 = `https://website-backend.w3champions.com/api/players/Flamy4%232811/game-mode-stats?gateWay=20&season=${y}`;
 
+let urlKrasik = `https://website-backend.w3champions.com/api/players/krasik%232848/game-mode-stats?gateWay=20&season=${s}`;
+
 async function getData() {
   const res = await fetch(urlPten);
   const data = await res.json();
@@ -57,6 +59,14 @@ async function getData() {
   for (let i = 0; i < dataIl.length; i++) {
     if (dataIl[i].gameMode == "1" && dataIl[i].race == "4") {
       document.querySelector(".mmrIl").innerHTML = dataIl[i].mmr;
+    }
+  }
+
+  const resKr = await fetch(urlKrasik);
+  const dataKr = await resKr.json();
+  for (let i = 0; i < dataKr.length; i++) {
+    if (dataKr[i].gameMode == "1" && dataKr[i].race == "4") {
+      document.querySelector(".mmr-kr").innerHTML = dataKr[i].mmr;
     }
   }
 
@@ -158,6 +168,11 @@ let urlFingonTwo =
 
 let urlTridentOne =
   "https://website-backend.w3champions.com/api/matches/search?playerId=tRid3nt%232910&gateway=20&offset=0&pageSize=300&season=11&gamemode=1";
+
+//krasik
+
+let urlKrasikOne =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=krasik%232848&gateway=20&offset=0&pageSize=300&season=11&gamemode=1";
 
 async function getDataPteN() {
   const resPtenSum = await fetch(urlPtenSumOne);
@@ -484,3 +499,39 @@ async function getDataTrident() {
 }
 
 getDataTrident();
+
+//krasik
+
+async function getDataKrasik() {
+  const resPtenSum = await fetch(urlKrasikOne);
+
+  const dataPteNSum = await resPtenSum.json();
+
+  let array = [];
+
+  for (let i = 0; i < dataPteNSum.matches.length; i++) {
+    if (
+      dataPteNSum.matches[i].teams[0].players[0].battleTag == "krasik#2848" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[0].players[0].race == "4"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSum.matches[i].teams[1].players[0].battleTag == "krasik#2848" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[1].players[0].race == "4"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  document.querySelector(".mmr-min-kr").innerHTML = Math.min.apply(null, array);
+
+  document.querySelector(".mmr-max-kr").innerHTML = Math.max.apply(null, array);
+
+  document.querySelector(".mmr-av-kr").innerHTML =
+    (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+}
+
+getDataKrasik();
