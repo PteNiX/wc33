@@ -26,8 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 });
 
-let s = "11";
-let y = "11";
+let s = "12";
 
 let urlPten = `https://website-backend.w3champions.com/api/players/PteN%2321803/game-mode-stats?gateWay=20&season=${s}`;
 
@@ -41,7 +40,7 @@ let urlFingon = `https://website-backend.w3champions.com/api/players/KawerOrda%2
 
 let urlTrident = `https://website-backend.w3champions.com/api/players/tRid3nt%232910/game-mode-stats?gateWay=20&season=${s}`;
 
-let urlFlamy4 = `https://website-backend.w3champions.com/api/players/Flamy4%232811/game-mode-stats?gateWay=20&season=${y}`;
+let urlFlamy4 = `https://website-backend.w3champions.com/api/players/Flamy4%232811/game-mode-stats?gateWay=20&season=${s}`;
 
 let urlKrasik = `https://website-backend.w3champions.com/api/players/krasik%232848/game-mode-stats?gateWay=20&season=${s}`;
 
@@ -109,70 +108,67 @@ async function getData() {
   const resFl = await fetch(urlFlamy4);
   const dataFl = await resFl.json();
 
-  const seas = () => {
-    for (let i = 0; i < dataFl.length; i++) {
-      if (dataFl[i].gameMode == "1" && dataFl[i].race == "4") {
-        document.querySelector(".mmrFla").innerHTML = dataFl[i].mmr;
-      }
-      if (document.querySelector(".mmrFla").innerHTML == "0") {
-        y = y - 1;
-      }
+  for (let i = 0; i < dataFl.length; i++) {
+    if (dataFl[i].gameMode == "1" && dataFl[i].race == "4") {
+      document.querySelector(".mmrFla").innerHTML = dataFl[i].mmr;
     }
-  };
-
-  seas();
+  }
 }
 
 getData();
 
 let urlPtenSumOne =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=0&pageSize=300&season=11";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=0&pageSize=300&season=12";
 
 let urlPtenSumTwo =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=100&pageSize=300&season=11";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=100&pageSize=300&season=12";
 
 let urlPtenSumThree =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=200&pageSize=300&season=11";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=200&pageSize=300&season=12";
 
 /* let urlPtenSumFour =
   "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=300&pageSize=300&season=11"; */
 
 //ilisori
 let urlIllisoriOne =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=Illisori%232201&gateway=20&offset=0&pageSize=300&season=11";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=Illisori%232201&gateway=20&offset=0&pageSize=300&season=12";
 
 //draniq
 
 let urlDraniqOne =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=0&pageSize=300&season=11";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=0&pageSize=300&season=12";
 let urlDraniqTwo =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=100&pageSize=300&season=11";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=100&pageSize=300&season=12";
 let urlDraniqThree =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=200&pageSize=300&season=11";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=200&pageSize=300&season=12";
 /* let urlDraniqFour =
   "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=300&pageSize=300&season=11"; */
 
 //vama
 
 let urlVamaOne =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=vama%2321920&gateway=20&offset=0&pageSize=300&season=11&gameMode=1";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=vama%2321920&gateway=20&offset=0&pageSize=300&season=12&gameMode=1";
 
 //Fingon
 
 let urlFingonOne =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=KawerOrda%232648&gateway=20&offset=0&pageSize=300&season=11";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=KawerOrda%232648&gateway=20&offset=0&pageSize=300&season=12";
 let urlFingonTwo =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=KawerOrda%232648&gateway=20&offset=100&pageSize=300&season=11";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=KawerOrda%232648&gateway=20&offset=100&pageSize=300&season=12";
 
 //trident
 
 let urlTridentOne =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=tRid3nt%232910&gateway=20&offset=0&pageSize=300&season=11&gamemode=1";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=tRid3nt%232910&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
 
 //krasik
 
 let urlKrasikOne =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=krasik%232848&gateway=20&offset=0&pageSize=300&season=11&gamemode=1";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=krasik%232848&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
+//flamy4
+
+let urlFlamy4One =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=Flamy4%232811&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
 
 async function getDataPteN() {
   const resPtenSum = await fetch(urlPtenSumOne);
@@ -288,14 +284,14 @@ getDataIllisori();
 
 async function getDataDraniq() {
   const resPtenSum = await fetch(urlDraniqOne);
-  const resPtenSumTwo = await fetch(urlDraniqTwo);
+  /*   const resPtenSumTwo = await fetch(urlDraniqTwo);
   const resPtenSumThree = await fetch(urlDraniqThree);
-  /*   const resPtenSumFour = await fetch(urlDraniqFour); */
+  const resPtenSumFour = await fetch(urlDraniqFour); */
 
   const dataPteNSum = await resPtenSum.json();
-  const dataPteNSumTwo = await resPtenSumTwo.json();
+  /*   const dataPteNSumTwo = await resPtenSumTwo.json();
   const dataPteNSumThree = await resPtenSumThree.json();
-  /*   const dataPteNSumFour = await resPtenSumFour.json(); */
+  const dataPteNSumFour = await resPtenSumFour.json(); */
 
   let array = [];
 
@@ -304,7 +300,7 @@ async function getDataDraniq() {
       dataPteNSum.matches[i].teams[0].players[0].battleTag ==
         "draniqBLR#2779" &&
       dataPteNSum.matches[i].gameMode == "1" &&
-      dataPteNSumTwo.matches[i].teams[0].players[0].race == "2"
+      dataPteNSum.matches[i].teams[0].players[0].race == "2"
     ) {
       array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
     }
@@ -312,13 +308,13 @@ async function getDataDraniq() {
       dataPteNSum.matches[i].teams[1].players[0].battleTag ==
         "draniqBLR#2779" &&
       dataPteNSum.matches[i].gameMode == "1" &&
-      dataPteNSumTwo.matches[i].teams[1].players[0].race == "2"
+      dataPteNSum.matches[i].teams[1].players[0].race == "2"
     ) {
       array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
     }
   }
 
-  for (let i = 0; i < dataPteNSumTwo.matches.length; i++) {
+  /* for (let i = 0; i < dataPteNSumTwo.matches.length; i++) {
     if (
       dataPteNSumTwo.matches[i].teams[0].players[0].battleTag ==
         "draniqBLR#2779" &&
@@ -354,7 +350,7 @@ async function getDataDraniq() {
     ) {
       array.push(dataPteNSumThree.matches[i].teams[1].players[0].currentMmr);
     }
-  }
+  } */
 
   document.querySelector(".mmr-min-dr").innerHTML = Math.min.apply(null, array);
 
@@ -399,7 +395,7 @@ async function getDataVama() {
 
 getDataVama();
 
-//vama
+//fingon
 
 async function getDataFingon() {
   const resPtenSum = await fetch(urlFingonOne);
@@ -535,3 +531,39 @@ async function getDataKrasik() {
 }
 
 getDataKrasik();
+
+//flamy4
+
+async function getDataFlamy4() {
+  const resPtenSum = await fetch(urlFlamy4One);
+
+  const dataPteNSum = await resPtenSum.json();
+
+  let array = [];
+
+  for (let i = 0; i < dataPteNSum.matches.length; i++) {
+    if (
+      dataPteNSum.matches[i].teams[0].players[0].battleTag == "FLAMY4#2811" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[0].players[0].race == "4"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSum.matches[i].teams[1].players[0].battleTag == "FLAMY4#2811" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[1].players[0].race == "4"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  document.querySelector(".mmr-min-fl").innerHTML = Math.min.apply(null, array);
+
+  document.querySelector(".mmr-max-fl").innerHTML = Math.max.apply(null, array);
+
+  document.querySelector(".mmr-av-fl").innerHTML =
+    (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+}
+
+getDataFlamy4();
