@@ -44,6 +44,8 @@ let urlFlamy4 = `https://website-backend.w3champions.com/api/players/Flamy4%2328
 
 let urlKrasik = `https://website-backend.w3champions.com/api/players/krasik%232848/game-mode-stats?gateWay=20&season=${s}`;
 
+let urlYolo = `https://website-backend.w3champions.com/api/players/Yolostime%232753/game-mode-stats?gateWay=20&season=${s}`;
+
 async function getData() {
   const res = await fetch(urlPten);
   const data = await res.json();
@@ -113,6 +115,15 @@ async function getData() {
       document.querySelector(".mmrFla").innerHTML = dataFl[i].mmr;
     }
   }
+
+  const resYo = await fetch(urlYolo);
+  const dataYo = await resYo.json();
+
+  for (let i = 0; i < dataYo.length; i++) {
+    if (dataYo[i].gameMode == "1" && dataYo[i].race == "8") {
+      document.querySelector(".mmrYo").innerHTML = dataYo[i].mmr;
+    }
+  }
 }
 
 getData();
@@ -137,11 +148,11 @@ let urlIllisoriOne =
 
 let urlDraniqOne =
   "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=0&pageSize=300&season=12";
-let urlDraniqTwo =
+/* let urlDraniqTwo =
   "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=100&pageSize=300&season=12";
 let urlDraniqThree =
   "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=200&pageSize=300&season=12";
-/* let urlDraniqFour =
+let urlDraniqFour =
   "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=300&pageSize=300&season=11"; */
 
 //vama
@@ -170,6 +181,9 @@ let urlKrasikOne =
 let urlFlamy4One =
   "https://website-backend.w3champions.com/api/matches/search?playerId=Flamy4%232811&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
 
+let urlYoloOne =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=Yolostime%232753&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
+
 async function getDataPteN() {
   const resPtenSum = await fetch(urlPtenSumOne);
   const resPtenSumTwo = await fetch(urlPtenSumTwo);
@@ -179,7 +193,6 @@ async function getDataPteN() {
   const dataPteNSumTwo = await resPtenSumTwo.json();
   const dataPteNSumThree = await resPtenSumThree.json();
 
-  console.log(dataPteNSumThree);
   let array = [];
 
   for (let i = 0; i < dataPteNSum.matches.length; i++) {
@@ -558,6 +571,7 @@ async function getDataFlamy4() {
     }
   }
 
+  console.log(dataPteNSum);
   document.querySelector(".mmr-min-fl").innerHTML = Math.min.apply(null, array);
 
   document.querySelector(".mmr-max-fl").innerHTML = Math.max.apply(null, array);
