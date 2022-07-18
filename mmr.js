@@ -254,10 +254,6 @@ async function getDataPteN() {
 
   document.querySelector(".mmr-av-PteN").innerHTML =
     (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
-
-  console.log(Math.min.apply(null, array));
-  console.log(Math.max.apply(null, array));
-  console.log(array);
 }
 
 getDataPteN();
@@ -556,14 +552,14 @@ async function getDataFlamy4() {
 
   for (let i = 0; i < dataPteNSum.matches.length; i++) {
     if (
-      dataPteNSum.matches[i].teams[0].players[0].battleTag == "FLAMY4#2811" &&
+      dataPteNSum.matches[i].teams[0].players[0].battleTag == "Flamy4#2811" &&
       dataPteNSum.matches[i].gameMode == "1" &&
       dataPteNSum.matches[i].teams[0].players[0].race == "4"
     ) {
       array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
     }
     if (
-      dataPteNSum.matches[i].teams[1].players[0].battleTag == "FLAMY4#2811" &&
+      dataPteNSum.matches[i].teams[1].players[0].battleTag == "Flamy4#2811" &&
       dataPteNSum.matches[i].gameMode == "1" &&
       dataPteNSum.matches[i].teams[1].players[0].race == "4"
     ) {
@@ -571,7 +567,6 @@ async function getDataFlamy4() {
     }
   }
 
-  console.log(dataPteNSum);
   document.querySelector(".mmr-min-fl").innerHTML = Math.min.apply(null, array);
 
   document.querySelector(".mmr-max-fl").innerHTML = Math.max.apply(null, array);
