@@ -576,3 +576,41 @@ async function getDataFlamy4() {
 }
 
 getDataFlamy4();
+
+//vama
+
+async function getDataYolo() {
+  const resPtenSum = await fetch(urlYoloOne);
+
+  const dataPteNSum = await resPtenSum.json();
+
+  let array = [];
+
+  for (let i = 0; i < dataPteNSum.matches.length; i++) {
+    if (
+      dataPteNSum.matches[i].teams[0].players[0].battleTag ==
+        "Yolostime#2753" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[0].players[0].race == "8"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSum.matches[i].teams[1].players[0].battleTag ==
+        "Yolostime#2753" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[1].players[0].race == "8"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  document.querySelector(".mmr-min-yo").innerHTML = Math.min.apply(null, array);
+
+  document.querySelector(".mmr-max-yo").innerHTML = Math.max.apply(null, array);
+
+  document.querySelector(".mmr-av-yo").innerHTML =
+    (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+}
+
+getDataYolo();
