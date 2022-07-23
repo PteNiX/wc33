@@ -453,15 +453,19 @@ async function getDataFingon() {
     }
   }
 
-  document.querySelector(".mmr-min-fin").innerHTML = Math.min.apply(
-    null,
-    array
-  );
+  if (Math.min.apply(null, array) < 4000 && Math.min.apply(null, array) > 0) {
+    document.querySelector(".mmr-min-fin").innerHTML = Math.min.apply(
+      null,
+      array
+    );
+  }
 
-  document.querySelector(".mmr-max-fin").innerHTML = Math.max.apply(
-    null,
-    array
-  );
+  if (Math.max.apply(null, array) < 4000 && Math.max.apply(null, array) > 0) {
+    document.querySelector(".mmr-max-fin").innerHTML = Math.max.apply(
+      null,
+      array
+    );
+  }
 
   document.querySelector(".mmr-av-fin").innerHTML =
     (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
@@ -495,10 +499,19 @@ async function getDataTrident() {
     }
   }
 
-  document.querySelector(".mmr-min-tr").innerHTML = Math.min.apply(null, array);
+  if (Math.min.apply(null, array) < 4000 && Math.min.apply(null, array) > 0) {
+    document.querySelector(".mmr-min-tr").innerHTML = Math.min.apply(
+      null,
+      array
+    );
+  }
 
-  document.querySelector(".mmr-max-tr").innerHTML = Math.max.apply(null, array);
-
+  if (Math.max.apply(null, array) < 4000 && Math.max.apply(null, array) > 0) {
+    document.querySelector(".mmr-max-tr").innerHTML = Math.max.apply(
+      null,
+      array
+    );
+  }
   document.querySelector(".mmr-av-tr").innerHTML =
     (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
 }
@@ -530,11 +543,18 @@ async function getDataKrasik() {
       array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
     }
   }
-
-  document.querySelector(".mmr-min-kr").innerHTML = Math.min.apply(null, array);
-
-  document.querySelector(".mmr-max-kr").innerHTML = Math.max.apply(null, array);
-
+  if (Math.min.apply(null, array) < 4000 && Math.min.apply(null, array) > 0) {
+    document.querySelector(".mmr-min-kr").innerHTML = Math.min.apply(
+      null,
+      array
+    );
+  }
+  if (Math.max.apply(null, array) < 4000 && Math.max.apply(null, array) > 0) {
+    document.querySelector(".mmr-max-kr").innerHTML = Math.max.apply(
+      null,
+      array
+    );
+  }
   document.querySelector(".mmr-av-kr").innerHTML =
     (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
 }
