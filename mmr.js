@@ -469,6 +469,10 @@ async function getDataFingon() {
 
   document.querySelector(".mmr-av-fin").innerHTML =
     (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+
+  if (document.querySelector(".mmr-av-fin").innerHTML == "NaN") {
+    document.querySelector(".mmr-av-fin").innerHTML = 0;
+  }
 }
 
 getDataFingon();
@@ -512,8 +516,13 @@ async function getDataTrident() {
       array
     );
   }
+
   document.querySelector(".mmr-av-tr").innerHTML =
     (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+
+  if (document.querySelector(".mmr-av-tr").innerHTML == "NaN") {
+    document.querySelector(".mmr-av-tr").innerHTML = 0;
+  }
 }
 
 getDataTrident();
