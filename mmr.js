@@ -46,6 +46,8 @@ let urlKrasik = `https://website-backend.w3champions.com/api/players/krasik%2328
 
 let urlYolo = `https://website-backend.w3champions.com/api/players/Yolostime%232753/game-mode-stats?gateWay=20&season=${s}`;
 
+let urlSho = `https://website-backend.w3champions.com/api/players/SHOGUN%2322192/game-mode-stats?gateWay=20&season=${s}`;
+
 async function getData() {
   const res = await fetch(urlPten);
   const data = await res.json();
@@ -124,6 +126,15 @@ async function getData() {
       document.querySelector(".mmrYo").innerHTML = dataYo[i].mmr;
     }
   }
+
+  const resSho = await fetch(urlSho);
+  const dataSho = await resSho.json();
+
+  for (let i = 0; i < dataSho.length; i++) {
+    if (dataSho[i].gameMode == "1" && dataSho[i].race == "1") {
+      document.querySelector(".mmrSho").innerHTML = dataSho[i].mmr;
+    }
+  }
 }
 
 getData();
@@ -183,6 +194,9 @@ let urlFlamy4One =
 
 let urlYoloOne =
   "https://website-backend.w3champions.com/api/matches/search?playerId=Yolostime%232753&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
+
+let urlShoOne =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=SHOGUN%2322192&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
 
 async function getDataPteN() {
   const resPtenSum = await fetch(urlPtenSumOne);
@@ -643,3 +657,43 @@ async function getDataYolo() {
 }
 
 getDataYolo();
+
+async function getDataShogun() {
+  const resPtenSum = await fetch(urlShoOne);
+
+  const dataPteNSum = await resPtenSum.json();
+
+  let array = [];
+
+  for (let i = 0; i < dataPteNSum.matches.length; i++) {
+    if (
+      dataPteNSum.matches[i].teams[0].players[0].battleTag == "Shogun#22192" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[0].players[0].race == "1"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSum.matches[i].teams[1].players[0].battleTag == "Shogun#22192" &&
+      dataPteNSum.matches[i].gameMode == "1" &&
+      dataPteNSum.matches[i].teams[1].players[0].race == "1"
+    ) {
+      array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  document.querySelector(".mmr-min-sho").innerHTML = Math.min.apply(
+    null,
+    array
+  );
+
+  document.querySelector(".mmr-max-sho").innerHTML = Math.max.apply(
+    null,
+    array
+  );
+
+  document.querySelector(".mmr-av-sho").innerHTML =
+    (Math.max.apply(null, array) + Math.min.apply(null, array)) / 2;
+}
+
+getDataShogun();
