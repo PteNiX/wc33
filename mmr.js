@@ -288,7 +288,7 @@ async function getDataIllisori() {
     if (
       dataPteNSum.matches[i].teams[0].players[0].battleTag == "Illisori#2201" &&
       dataPteNSum.matches[i].gameMode == "1" &&
-      dataPteNSum.matches[i].teams[1].players[0].race == "4"
+      dataPteNSum.matches[i].teams[0].players[0].race == "4"
     ) {
       array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
     }
