@@ -46,7 +46,7 @@ let urlKrasik = `https://website-backend.w3champions.com/api/players/krasik%2328
 
 let urlYolo = `https://website-backend.w3champions.com/api/players/Yolostime%232753/game-mode-stats?gateWay=20&season=${s}`;
 
-let urlSho = `https://website-backend.w3champions.com/api/players/SHOGUN%2322192/game-mode-stats?gateWay=20&season=${s}`;
+let urlSho = `https://website-backend.w3champions.com/api/players/Shogun%2322192/game-mode-stats?gateWay=20&season=${s}`;
 
 async function getData() {
   const res = await fetch(urlPten);
@@ -196,7 +196,7 @@ let urlYoloOne =
   "https://website-backend.w3champions.com/api/matches/search?playerId=Yolostime%232753&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
 
 let urlShoOne =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=SHOGUN%2322192&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=Shogun%2322192&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
 
 async function getDataPteN() {
   const resPtenSum = await fetch(urlPtenSumOne);
