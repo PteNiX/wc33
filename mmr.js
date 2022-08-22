@@ -230,14 +230,14 @@ async function getDataPteN() {
     if (
       dataPteNSumTwo.matches[i].teams[0].players[0].battleTag == "PteN#21803" &&
       dataPteNSumTwo.matches[i].gameMode == "1"
-      && dataPteNSum.matches[i].teams[1].players[0].race == "2"
+      && dataPteNSumTwo.matches[i].teams[0].players[0].race == "2"
     ) {
       array.push(dataPteNSumTwo.matches[i].teams[0].players[0].currentMmr);
     }
     if (
       dataPteNSumTwo.matches[i].teams[1].players[0].battleTag == "PteN#21803" &&
       dataPteNSumTwo.matches[i].gameMode == "1"
-      && dataPteNSum.matches[i].teams[1].players[0].race == "2"
+      && dataPteNSumTwo.matches[i].teams[1].players[0].race == "2"
     ) {
       array.push(dataPteNSumTwo.matches[i].teams[1].players[0].currentMmr);
     }
@@ -248,6 +248,9 @@ async function getDataPteN() {
       dataPteNSumThree.matches[i].teams[0].players[0].battleTag ==
         "PteN#21803" &&
       dataPteNSumThree.matches[i].gameMode == "1"
+      
+      && dataPteNSumThree.matches[i].teams[0].players[0].race == "2"
+
     ) {
       array.push(dataPteNSumThree.matches[i].teams[0].players[0].currentMmr);
     }
@@ -255,6 +258,8 @@ async function getDataPteN() {
       dataPteNSumThree.matches[i].teams[1].players[0].battleTag ==
         "PteN#21803" &&
       dataPteNSumThree.matches[i].gameMode == "1"
+      
+      && dataPteNSumThree.matches[i].teams[1].players[0].race == "2"
     ) {
       array.push(dataPteNSumThree.matches[i].teams[1].players[0].currentMmr);
     }
