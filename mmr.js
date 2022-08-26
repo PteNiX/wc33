@@ -30,6 +30,7 @@ let s = "12";
 
 let urlPten = `https://website-backend.w3champions.com/api/players/PteN%2321803/game-mode-stats?gateWay=20&season=${s}`;
 
+
 let urlillisori = `https://website-backend.w3champions.com/api/players/Illisori%232201/game-mode-stats?gateWay=20&season=${s}`;
 
 let urlDraniq = `https://website-backend.w3champions.com/api/players/draniqBLR%232779/game-mode-stats?gateWay=20&season=${s}`;
@@ -53,6 +54,7 @@ let urlTom = `https://website-backend.w3champions.com/api/players/TomPoncho%2321
 async function getData() {
   const res = await fetch(urlPten);
   const data = await res.json();
+
   for (let i = 0; i < data.length; i++) {
     if (data[i].gameMode == "1" && data[i].race == "2") {
       document.querySelector(".mmrPteN").innerHTML = data[i].mmr;
