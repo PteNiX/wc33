@@ -122,6 +122,7 @@ html {
 
 .hu-background {
   background-color: rgb(224, 255, 255);
+  
 }
 
 .oc-background {
@@ -131,7 +132,7 @@ html {
   background-color: rgb(190, 252, 195);
 }
 .ud-background {
-  background-color: rgb(240, 210, 252);
+  background-color: rgb(238, 217, 247);
 }
 .bg {
   width: 100%;
@@ -259,16 +260,46 @@ html {
 }
 
 .russia {
-  color: blue;
+  color: rgb(0, 57, 166);
+  font-size: bold;
+}
+
+.russia:hover {
+  color: rgb(255, 255, 255);
+  font-size: bold;
 }
 
 .belarus {
-  color: red;
+  color: rgb(204 0 0);
+  font-size: bold;
+}
+
+.belarus:hover {
+  color: rgb(255, 255, 255);
+  font-size: bold;
 }
 
 .ukraine {
-  color: rgb(209, 212, 3);
+  color: rgb(	0, 87, 184);
+  font-size: bold;
 }
+
+.ukraine:hover {
+  
+  color: rgb(255, 215, 0);
+}
+
+.kyrgyzstan{
+  color: rgb(255, 0, 0);
+  font-size: bold;
+}
+
+.kyrgyzstan:hover{
+  color: rgb(255, 255 ,0);
+  font-size: bold;
+}
+
+
 
 @media all and (min-width: 600px) and (max-width: 740px) {
   .main__links__link {
