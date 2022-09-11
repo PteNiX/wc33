@@ -30,7 +30,6 @@ let s = "12";
 
 let urlPten = `https://website-backend.w3champions.com/api/players/PteN%2321803/game-mode-stats?gateWay=20&season=${s}`;
 
-
 let urlillisori = `https://website-backend.w3champions.com/api/players/Illisori%232201/game-mode-stats?gateWay=20&season=${s}`;
 
 let urlDraniq = `https://website-backend.w3champions.com/api/players/draniqBLR%232779/game-mode-stats?gateWay=20&season=${s}`;
@@ -140,7 +139,6 @@ async function getData() {
     }
   }
 
-
   const resTom = await fetch(urlTom);
   const dataTom = await resTom.json();
 
@@ -149,7 +147,6 @@ async function getData() {
       document.querySelector(".mmr-tp").innerHTML = dataTom[i].mmr;
     }
   }
-
 }
 
 getData();
@@ -174,9 +171,9 @@ let urlIllisoriOne =
 
 let urlDraniqOne =
   "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=0&pageSize=300&season=12";
-/* let urlDraniqTwo =
+let urlDraniqTwo =
   "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=100&pageSize=300&season=12";
-let urlDraniqThree =
+/* let urlDraniqThree =
   "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=200&pageSize=300&season=12";
 let urlDraniqFour =
   "https://website-backend.w3champions.com/api/matches/search?playerId=draniqBLR%232779&gateway=20&offset=300&pageSize=300&season=11"; */
@@ -213,11 +210,14 @@ let urlYoloOne =
 let urlShoOne =
   "https://website-backend.w3champions.com/api/matches/search?playerId=Shogun%2322192&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
 
-  let urlTomOne =
+let urlTomOne =
   "https://website-backend.w3champions.com/api/matches/search?playerId=TomPoncho%2321719&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
 
+let urlTomTwo =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=TomPoncho%2321719&gateway=20&offset=100&pageSize=300&season=12&gamemode=1";
 
-
+let urlTomThree =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=TomPoncho%2321719&gateway=20&offset=200&pageSize=300&season=12&gamemode=1";
 
 async function getDataPteN() {
   const resPtenSum = await fetch(urlPtenSumOne);
@@ -250,15 +250,15 @@ async function getDataPteN() {
   for (let i = 0; i < dataPteNSumTwo.matches.length; i++) {
     if (
       dataPteNSumTwo.matches[i].teams[0].players[0].battleTag == "PteN#21803" &&
-      dataPteNSumTwo.matches[i].gameMode == "1"
-      && dataPteNSumTwo.matches[i].teams[0].players[0].race == "2"
+      dataPteNSumTwo.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[0].players[0].race == "2"
     ) {
       array.push(dataPteNSumTwo.matches[i].teams[0].players[0].currentMmr);
     }
     if (
       dataPteNSumTwo.matches[i].teams[1].players[0].battleTag == "PteN#21803" &&
-      dataPteNSumTwo.matches[i].gameMode == "1"
-      && dataPteNSumTwo.matches[i].teams[1].players[0].race == "2"
+      dataPteNSumTwo.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[1].players[0].race == "2"
     ) {
       array.push(dataPteNSumTwo.matches[i].teams[1].players[0].currentMmr);
     }
@@ -268,19 +268,16 @@ async function getDataPteN() {
     if (
       dataPteNSumThree.matches[i].teams[0].players[0].battleTag ==
         "PteN#21803" &&
-      dataPteNSumThree.matches[i].gameMode == "1"
-      
-      && dataPteNSumThree.matches[i].teams[0].players[0].race == "2"
-
+      dataPteNSumThree.matches[i].gameMode == "1" &&
+      dataPteNSumThree.matches[i].teams[0].players[0].race == "2"
     ) {
       array.push(dataPteNSumThree.matches[i].teams[0].players[0].currentMmr);
     }
     if (
       dataPteNSumThree.matches[i].teams[1].players[0].battleTag ==
         "PteN#21803" &&
-      dataPteNSumThree.matches[i].gameMode == "1"
-      
-      && dataPteNSumThree.matches[i].teams[1].players[0].race == "2"
+      dataPteNSumThree.matches[i].gameMode == "1" &&
+      dataPteNSumThree.matches[i].teams[1].players[0].race == "2"
     ) {
       array.push(dataPteNSumThree.matches[i].teams[1].players[0].currentMmr);
     }
@@ -339,13 +336,13 @@ getDataIllisori();
 
 async function getDataDraniq() {
   const resPtenSum = await fetch(urlDraniqOne);
-  /*   const resPtenSumTwo = await fetch(urlDraniqTwo);
-  const resPtenSumThree = await fetch(urlDraniqThree);
+  const resPtenSumTwo = await fetch(urlDraniqTwo);
+  /*   const resPtenSumThree = await fetch(urlDraniqThree);
   const resPtenSumFour = await fetch(urlDraniqFour); */
 
   const dataPteNSum = await resPtenSum.json();
-  /*   const dataPteNSumTwo = await resPtenSumTwo.json();
-  const dataPteNSumThree = await resPtenSumThree.json();
+  const dataPteNSumTwo = await resPtenSumTwo.json();
+  /*   const dataPteNSumThree = await resPtenSumThree.json();
   const dataPteNSumFour = await resPtenSumFour.json(); */
 
   let array = [];
@@ -369,7 +366,7 @@ async function getDataDraniq() {
     }
   }
 
-  /* for (let i = 0; i < dataPteNSumTwo.matches.length; i++) {
+  for (let i = 0; i < dataPteNSumTwo.matches.length; i++) {
     if (
       dataPteNSumTwo.matches[i].teams[0].players[0].battleTag ==
         "draniqBLR#2779" &&
@@ -388,7 +385,7 @@ async function getDataDraniq() {
     }
   }
 
-  for (let i = 0; i < dataPteNSumThree.matches.length; i++) {
+  /*   for (let i = 0; i < dataPteNSumThree.matches.length; i++) {
     if (
       dataPteNSumThree.matches[i].teams[0].players[0].battleTag ==
         "draniqBLR#2779" &&
@@ -730,28 +727,71 @@ async function getDataShogun() {
 
 getDataShogun();
 
-
 async function getDataTom() {
   const resPtenSum = await fetch(urlTomOne);
+  const resPtenSumTwo = await fetch(urlTomTwo);
+  const resPtenSumThree = await fetch(urlTomThree);
 
   const dataPteNSum = await resPtenSum.json();
+  const dataPteNSumTwo = await resPtenSumTwo.json();
+  const dataPteNSumThree = await resPtenSumThree.json();
 
   let array = [];
 
   for (let i = 0; i < dataPteNSum.matches.length; i++) {
     if (
-      dataPteNSum.matches[i].teams[0].players[0].battleTag == "TomPoncho#21719" &&
+      dataPteNSum.matches[i].teams[0].players[0].battleTag ==
+        "TomPoncho#21719" &&
       dataPteNSum.matches[i].gameMode == "1" &&
       dataPteNSum.matches[i].teams[0].players[0].race == "4"
     ) {
       array.push(dataPteNSum.matches[i].teams[0].players[0].currentMmr);
     }
     if (
-      dataPteNSum.matches[i].teams[1].players[0].battleTag == "TomPoncho#21719" &&
+      dataPteNSum.matches[i].teams[1].players[0].battleTag ==
+        "TomPoncho#21719" &&
       dataPteNSum.matches[i].gameMode == "1" &&
       dataPteNSum.matches[i].teams[1].players[0].race == "4"
     ) {
       array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  for (let i = 0; i < dataPteNSumTwo.matches.length; i++) {
+    if (
+      dataPteNSumTwo.matches[i].teams[0].players[0].battleTag ==
+        "TomPoncho#21719" &&
+      dataPteNSumTwo.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[0].players[0].race == "4"
+    ) {
+      array.push(dataPteNSumTwo.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSumTwo.matches[i].teams[1].players[0].battleTag ==
+        "TomPoncho#21719" &&
+      dataPteNSumTwo.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[1].players[0].race == "4"
+    ) {
+      array.push(dataPteNSumTwo.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  for (let i = 0; i < dataPteNSumThree.matches.length; i++) {
+    if (
+      dataPteNSumThree.matches[i].teams[0].players[0].battleTag ==
+        "TomPoncho#21719" &&
+      dataPteNSumThree.matches[i].gameMode == "1" &&
+      dataPteNSumThree.matches[i].teams[0].players[0].race == "4"
+    ) {
+      array.push(dataPteNSumThree.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSumThree.matches[i].teams[1].players[0].battleTag ==
+        "TomPoncho#21719" &&
+      dataPteNSumThree.matches[i].gameMode == "1" &&
+      dataPteNSumThree.matches[i].teams[1].players[0].race == "4"
+    ) {
+      array.push(dataPteNSumThree.matches[i].teams[1].players[0].currentMmr);
     }
   }
 
