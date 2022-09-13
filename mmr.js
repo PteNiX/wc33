@@ -295,7 +295,7 @@ async function getDataPteN() {
       dataPteNSumFour.matches[i].gameMode == "1" &&
       dataPteNSumFour.matches[i].teams[0].players[0].race == "2"
     ) {
-      array.push(dataPteNSumThree.matches[i].teams[0].players[0].currentMmr);
+      array.push(dataPteNSumFour.matches[i].teams[0].players[0].currentMmr);
     }
     if (
       dataPteNSumFour.matches[i].teams[1].players[0].battleTag ==
