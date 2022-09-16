@@ -210,6 +210,9 @@ let urlFlamy4One =
 let urlYoloOne =
   "https://website-backend.w3champions.com/api/matches/search?playerId=Yolostime%232753&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
 
+let urlYoloTwo =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=Yolostime%232753&gateway=20&offset=100&pageSize=300&season=12&gamemode=1";
+
 let urlShoOne =
   "https://website-backend.w3champions.com/api/matches/search?playerId=Shogun%2322192&gateway=20&offset=0&pageSize=300&season=12&gamemode=1";
 
@@ -699,8 +702,10 @@ getDataFlamy4();
 
 async function getDataYolo() {
   const resPtenSum = await fetch(urlYoloOne);
+  const resPtenSumTwo = await fetch(urlYoloTwo);
 
   const dataPteNSum = await resPtenSum.json();
+  const dataPteNSumTwo = await resPtenSumTwo.json();
 
   let array = [];
 
@@ -720,6 +725,25 @@ async function getDataYolo() {
       dataPteNSum.matches[i].teams[1].players[0].race == "8"
     ) {
       array.push(dataPteNSum.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  for (let i = 0; i < dataPteNSumTwo.matches.length; i++) {
+    if (
+      dataPteNSumTwo.matches[i].teams[0].players[0].battleTag ==
+        "Yolostime#2753" &&
+      dataPteNSumTwo.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[0].players[0].race == "8"
+    ) {
+      array.push(dataPteNSumTwo.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSumTwo.matches[i].teams[1].players[0].battleTag ==
+        "Yolostime#2753" &&
+      dataPteNSumTwo.matches[i].gameMode == "1" &&
+      dataPteNSumTwo.matches[i].teams[1].players[0].race == "8"
+    ) {
+      array.push(dataPteNSumTwo.matches[i].teams[1].players[0].currentMmr);
     }
   }
 
