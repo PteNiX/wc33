@@ -163,6 +163,9 @@ let urlPtenSumThree =
 let urlPtenSumFour =
   "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=300&pageSize=300&season=11";
 
+let urlPtenSumFive =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=400&pageSize=300&season=11";
+
 //ilisori
 let urlIllisoriOne =
   "https://website-backend.w3champions.com/api/matches/search?playerId=Illisori%232201&gateway=20&offset=0&pageSize=300&season=12";
@@ -230,11 +233,13 @@ async function getDataPteN() {
   const resPtenSumTwo = await fetch(urlPtenSumTwo);
   const resPtenSumThree = await fetch(urlPtenSumThree);
   const resPtenSumFour = await fetch(urlPtenSumFour);
+  const resPtenSumFive = await fetch(urlPtenSumFive);
 
   const dataPteNSum = await resPtenSum.json();
   const dataPteNSumTwo = await resPtenSumTwo.json();
   const dataPteNSumThree = await resPtenSumThree.json();
   const dataPteNSumFour = await resPtenSumFour.json();
+  const dataPteNSumFive = await resPtenSumFive.json();
 
   let array = [];
 
@@ -310,6 +315,24 @@ async function getDataPteN() {
     }
   }
 
+  for (let i = 0; i < dataPteNSumFive.matches.length; i++) {
+    if (
+      dataPteNSumFive.matches[i].teams[0].players[0].battleTag ==
+        "PteN#21803" &&
+      dataPteNSumFive.matches[i].gameMode == "1" &&
+      dataPteNSumFive.matches[i].teams[0].players[0].race == "2"
+    ) {
+      array.push(dataPteNSumFive.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSumFive.matches[i].teams[1].players[0].battleTag ==
+        "PteN#21803" &&
+      dataPteNSumFive.matches[i].gameMode == "1" &&
+      dataPteNSumFive.matches[i].teams[1].players[0].race == "2"
+    ) {
+      array.push(dataPteNSumFive.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
   document.querySelector(".mmr-min-PteN").innerHTML = Math.min.apply(
     null,
     array
