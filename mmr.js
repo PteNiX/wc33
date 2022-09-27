@@ -228,6 +228,9 @@ let urlTomTwo =
 let urlTomThree =
   "https://website-backend.w3champions.com/api/matches/search?playerId=TomPoncho%2321719&gateway=20&offset=200&pageSize=300&season=12&gamemode=1";
 
+let urlTomFour =
+  "https://website-backend.w3champions.com/api/matches/search?playerId=TomPoncho%2321719&gateway=20&offset=300&pageSize=300&season=12&gamemode=1";
+
 async function getDataPteN() {
   const resPtenSum = await fetch(urlPtenSumOne);
   const resPtenSumTwo = await fetch(urlPtenSumTwo);
@@ -824,10 +827,12 @@ async function getDataTom() {
   const resPtenSum = await fetch(urlTomOne);
   const resPtenSumTwo = await fetch(urlTomTwo);
   const resPtenSumThree = await fetch(urlTomThree);
+  const resPtenSumFour = await fetch(urlTomFour);
 
   const dataPteNSum = await resPtenSum.json();
   const dataPteNSumTwo = await resPtenSumTwo.json();
   const dataPteNSumThree = await resPtenSumThree.json();
+  const dataPteNSumFour = await resPtenSumFour.json();
 
   let array = [];
 
@@ -885,6 +890,25 @@ async function getDataTom() {
       dataPteNSumThree.matches[i].teams[1].players[0].race == "4"
     ) {
       array.push(dataPteNSumThree.matches[i].teams[1].players[0].currentMmr);
+    }
+  }
+
+  for (let i = 0; i < dataPteNSumFour.matches.length; i++) {
+    if (
+      dataPteNSumFour.matches[i].teams[0].players[0].battleTag ==
+        "TomPoncho#21719" &&
+      dataPteNSumFour.matches[i].gameMode == "1" &&
+      dataPteNSumFour.matches[i].teams[0].players[0].race == "4"
+    ) {
+      array.push(dataPteNSumFour.matches[i].teams[0].players[0].currentMmr);
+    }
+    if (
+      dataPteNSumFour.matches[i].teams[1].players[0].battleTag ==
+        "TomPoncho#21719" &&
+      dataPteNSumFour.matches[i].gameMode == "1" &&
+      dataPteNSumFour.matches[i].teams[1].players[0].race == "4"
+    ) {
+      array.push(dataPteNSumFour.matches[i].teams[1].players[0].currentMmr);
     }
   }
 
