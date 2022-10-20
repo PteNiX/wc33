@@ -161,10 +161,10 @@ let urlPtenSumThree =
   "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=200&pageSize=300&season=12";
 
 let urlPtenSumFour =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=300&pageSize=300&season=11";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=300&pageSize=300&season=12";
 
 let urlPtenSumFive =
-  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=400&pageSize=300&season=11";
+  "https://website-backend.w3champions.com/api/matches/search?playerId=PteN%2321803&gateway=20&offset=400&pageSize=300&season=12";
 
 //ilisori
 let urlIllisoriOne =
