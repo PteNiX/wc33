@@ -50,6 +50,8 @@ let urlSho = `https://website-backend.w3champions.com/api/players/Shogun%2322192
 
 let urlTom = `https://website-backend.w3champions.com/api/players/TomPoncho%2321719/game-mode-stats?gateWay=20&season=${s}`;
 
+let urlGla = `https://website-backend.w3champions.com/api/players/Glare%232264/game-mode-stats?gateWay=20&season=${s}`;
+
 async function getData() {
   const res = await fetch(urlPten);
   const data = await res.json();
@@ -145,6 +147,15 @@ async function getData() {
   for (let i = 0; i < dataTom.length; i++) {
     if (dataTom[i].gameMode == "1" && dataTom[i].race == "4") {
       document.querySelector(".mmr-tp").innerHTML = dataTom[i].mmr;
+    }
+  }
+
+  const resGla = await fetch(urlGla);
+  const dataGla = await resGla.json();
+
+  for (let i = 0; i < dataGla.length; i++) {
+    if (dataGla[i].gameMode == "1" && dataGla[i].race == "4") {
+      document.querySelector(".mmr-gl").innerHTML = dataGla[i].mmr;
     }
   }
 }

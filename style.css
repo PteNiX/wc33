@@ -122,7 +122,6 @@ html {
 
 .hu-background {
   background-color: rgb(224, 255, 255);
-  
 }
 
 .oc-background {
@@ -280,26 +279,33 @@ html {
 }
 
 .ukraine {
-  color: rgb(	0, 87, 184);
+  color: rgb(0, 87, 184);
   font-size: bold;
 }
 
 .ukraine:hover {
-  
   color: rgb(255, 215, 0);
 }
 
-.kyrgyzstan{
+.kyrgyzstan {
   color: rgb(255, 0, 0);
   font-size: bold;
 }
 
-.kyrgyzstan:hover{
-  color: rgb(255, 255 ,0);
+.kyrgyzstan:hover {
+  color: rgb(255, 255, 0);
   font-size: bold;
 }
 
+.poland {
+  color: #d4213d;
+  font-size: bold;
+}
 
+.poland:hover {
+  color: #e9e8e7;
+  font-size: bold;
+}
 
 @media all and (min-width: 600px) and (max-width: 740px) {
   .main__links__link {
