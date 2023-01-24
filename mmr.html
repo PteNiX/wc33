@@ -13,25 +13,39 @@
 
 <body class="body">
 
-
-
-
-
     <main class="mmr-page">
         <table class=" table_sort table table-frame" id="sortable">
             <caption class="caption table-frame">
-                <p class="table-title"> Active platoon players MMR Season 12 + Fingon</p>
+                <p class="table-title"> Active platoon players Season13 MMR + Fingon + Poncho</p>
+                <label for="season">Choose season:</label>
+                <select id='mySelect' class="select" type="number">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                </select>
+                <button class="button">Show</button>
             </caption>
             <thead>
                 <tr>
                     <th class="table-frame table-minititle">Player Name</th>
                     <th class="table-frame table-minititle">Country</th>
                     <th class="table-frame table-minititle">Race</th>
+                    <th class="table-frame table-minititle">Games</th>
                     <th class="table-frame table-minititle">Current MMR</th>
                     <th class="table-frame table-minititle"> Min MMR</th>
                     <th class="table-frame table-minititle"> Max MMR</th>
                     <th class="table-frame table-minititle">Average MMR</th>
-
+                    <th class="table-frame table-minititle">Median MMR</th>
 
                 </tr>
 
@@ -46,13 +60,12 @@
                         <span class="russia">RU </span>
                     </td>
                     <td class="table-frame ne-background"><img src="assets/img/elf.gif" class="race" alt="flag"></td>
-                    <td class="table-frame ne-background mmrIl" id="nwc3l-Illisori-total"> 0</td>
-                    <td class="table-frame ne-background  mmr-min-il" id="nwc3l-Illisori-win-map"> 0</td>
-                    <td class="table-frame ne-background mmr-max-il" id="nwc3l-Illisori-lose-map"> 0</td>
-                    <td class="table-frame ne-background mmr-av-il" id="nwc3l-Illisori-winrate"> 0 </td>
-
-
-
+                    <td class="table-frame ne-background games-illisori" id="nwc3l-Illisori-total"> 0</td>
+                    <td class="table-frame ne-background mmr-illisori" id="nwc3l-Illisori-total"> 0</td>
+                    <td class="table-frame ne-background  mmr-min-illisori" id="nwc3l-Illisori-win-map"> 0</td>
+                    <td class="table-frame ne-background mmr-max-illisori" id="nwc3l-Illisori-lose-map"> 0</td>
+                    <td class="table-frame ne-background mmr-av-illisori" id="nwc3l-Illisori-winrate"> 0 </td>
+                    <td class="table-frame ne-background mmr-me-illisori" id="nwc3l-Illisori-winrate"> 0 </td>
 
                 </tr>
                 <tr>
@@ -64,12 +77,12 @@
                     </td>
                     </td>
                     <td class="table-frame oc-background"><img src="assets/img/orc.gif" class="race" alt="flag"></td>
-                    <td class="table-frame oc-background mmrPteN" id="nwc3l-PteN-total"> 0</td>
-                    <td class="table-frame oc-background  mmr-min-PteN" id="nwc3l-PteN-win-map"> 0</td>
-                    <td class="table-frame oc-background mmr-max-PteN" id="nwc3l-PteN-lose-map"> 0</td>
-                    <td class="table-frame oc-background mmr-av-PteN" id="nwc3l-PteN-winrate"> 0 </td>
-
-
+                    <td class="table-frame oc-background games-pten" id="nwc3l-PteN-total"> 0</td>
+                    <td class="table-frame oc-background mmr-pten" id="nwc3l-PteN-total"> 0</td>
+                    <td class="table-frame oc-background  mmr-min-pten" id="nwc3l-PteN-win-map"> 0</td>
+                    <td class="table-frame oc-background mmr-max-pten" id="nwc3l-PteN-lose-map"> 0</td>
+                    <td class="table-frame oc-background mmr-av-pten" id="nwc3l-PteN-winrate"> 0 </td>
+                    <td class="table-frame oc-background mmr-me-pten" id="nwc3l-PteN-winrate"> 0 </td>
 
                 </tr>
                 <tr>
@@ -80,15 +93,16 @@
                         </span>
                     </td>
                     <td class="table-frame oc-background"><img src="assets/img/orc.gif" class="race" alt="flag"></td>
-                    <td class="table-frame oc-background mmrDra" id="nwc3l-Draniq-total"> 0</td>
-                    <td class="table-frame oc-background mmr-min-dr" id="nwc3l-Draniq-win-map"> 0</td>
-                    <td class="table-frame oc-background mmr-max-dr" id="nwc3l-Draniq-lose-map"> 0</td>
-                    <td class="table-frame oc-background mmr-av-dr" id="nwc3l-Draniq-winrate"> 0 </td>
-
+                    <td class="table-frame oc-background games-draniqblr" id="nwc3l-Draniq-total"> 0</td>
+                    <td class="table-frame oc-background mmr-draniqblr" id="nwc3l-Draniq-total"> 0</td>
+                    <td class="table-frame oc-background mmr-min-draniqblr" id="nwc3l-Draniq-win-map"> 0</td>
+                    <td class="table-frame oc-background mmr-max-draniqblr" id="nwc3l-Draniq-lose-map"> 0</td>
+                    <td class="table-frame oc-background mmr-av-draniqblr" id="nwc3l-Draniq-winrate"> 0 </td>
+                    <td class="table-frame oc-background mmr-me-draniqblr" id="nwc3l-Draniq-winrate"> 0 </td>
 
                 </tr>
 
-                <tr>
+                <!--                 <tr>
                     <td class="table-frame ne-background"><a class="player elf"
                             href="https://warcraft3.info/stats/player/14279" title="Flamy4"> Flamy4</a></td>
                     <td class="table-frame ne-background">
@@ -97,14 +111,14 @@
                     </td>
                     <td class="table-frame ne-background"><img src="assets/img/elf.gif" class="race" alt="flag">
                     </td>
-                    <td class="table-frame ne-background mmrFla" id="nwc3l-Flamy4-total">0</td>
-                    <td class="table-frame ne-background mmr-min-fl" id="nwc3l-Flamy4-win-map"> 0</td>
-                    <td class="table-frame ne-background mmr-max-fl" id="nwc3l-Flamy4-lose-map"> 0</td>
-                    <td class="table-frame ne-background mmr-av-fl" id="nwc3l-Flamy4-winrate"> 0 </td>
+                    <td class="table-frame ne-background games-flamy4" id="nwc3l-Flamy4-total">0</td>
+                    <td class="table-frame ne-background mmr-flamy4" id="nwc3l-Flamy4-total">0</td>
+                    <td class="table-frame ne-background mmr-min-flamy4" id="nwc3l-Flamy4-win-map"> 0</td>
+                    <td class="table-frame ne-background mmr-max-flamy4" id="nwc3l-Flamy4-lose-map"> 0</td>
+                    <td class="table-frame ne-background mmr-av-flamy4" id="nwc3l-Flamy4-winrate"> 0 </td>
+                    <td class="table-frame ne-background mmr-me-flamy4" id="nwc3l-Flamy4-winrate"> 0 </td>
 
-
-
-                </tr>
+                </tr> -->
 
                 <tr>
                     <td class="table-frame ud-background"><a class="player ud"
@@ -114,11 +128,12 @@
                         </span>
                     </td>
                     <td class="table-frame ud-background"><img src="assets/img/undead.gif" class="race" alt="flag"></td>
-                    <td class="table-frame ud-background mmrVam" id="nwc3l-Vama-total"> 0</td>
-                    <td class="table-frame ud-background  mmr-min-va" id="nwc3l-Vama-win-map"> 0</td>
-                    <td class="table-frame ud-background mmr-max-va" id="nwc3l-Vama-lose-map"> 0</td>
-                    <td class="table-frame ud-background mmr-av-va" id="nwc3l-Vama-winrate"> 0 </td>
-
+                    <td class="table-frame ud-background games-vama" id="nwc3l-Vama-total"> 0</td>
+                    <td class="table-frame ud-background mmr-vama" id="nwc3l-Vama-total"> 0</td>
+                    <td class="table-frame ud-background  mmr-min-vama" id="nwc3l-Vama-win-map"> 0</td>
+                    <td class="table-frame ud-background mmr-max-vama" id="nwc3l-Vama-lose-map"> 0</td>
+                    <td class="table-frame ud-background mmr-av-vama" id="nwc3l-Vama-winrate"> 0 </td>
+                    <td class="table-frame ud-background mmr-me-vama" id="nwc3l-Vama-winrate"> 0 </td>
                 </tr>
 
                 <!--                 <tr>
@@ -134,23 +149,9 @@
                     <td class="table-frame oc-background mmr-max-tr"> 0</td>
                     <td class="table-frame oc-background mmr-av-tr"> 0 </td>
 
-
-
                 </tr> -->
 
-                <tr>
-                    <td class="table-frame ne-background"><a class="player elf" href="" title="Fingon"> Fingon</a></td>
-                    <td class="table-frame ne-background">
-                        <span class="ukraine">UA </span>
-                    </td>
-                    <td class="table-frame ne-background"><img src="assets/img/elf.gif" class="race" alt="flag">
-                    </td>
-                    <td class="table-frame ne-background mmrFin"> 0</td>
-                    <td class="table-frame ne-background  mmr-min-fin"> 0</td>
-                    <td class="table-frame ne-background mmr-max-fin"> 0</td>
-                    <td class="table-frame ne-background mmr-av-fin"> 0 </td>
 
-                </tr>
 
                 <tr>
                     <td class="table-frame ne-background"><a class="player elf"
@@ -161,10 +162,12 @@
                     </td>
                     <td class="table-frame ne-background"><img src="assets/img/elf.gif" class="race" alt="flag">
                     </td>
-                    <td class="table-frame ne-background mmr-kr"> 0</td>
-                    <td class="table-frame ne-background mmr-min-kr "> 0</td>
-                    <td class="table-frame ne-background mmr-max-kr"> 0</td>
-                    <td class="table-frame ne-background mmr-av-kr"> 0 </td>
+                    <td class="table-frame ne-background games-krasik"> 0</td>
+                    <td class="table-frame ne-background mmr-krasik"> 0</td>
+                    <td class="table-frame ne-background mmr-min-krasik "> 0</td>
+                    <td class="table-frame ne-background mmr-max-krasik"> 0</td>
+                    <td class="table-frame ne-background mmr-av-krasik"> 0 </td>
+                    <td class="table-frame ne-background mmr-me-krasik"> 0 </td>
 
                 </tr>
 
@@ -178,17 +181,16 @@
                         </span>
                     </td>
                     <td class="table-frame ud-background"><img src="assets/img/undead.gif" class="race" alt="flag"></td>
-                    <td class="table-frame ud-background mmrYo" id="nwc3l-yolo-total"> 0</td>
-                    <td class="table-frame ud-background  mmr-min-yo" id="nwc3l-yo-win-map"> 0</td>
-                    <td class="table-frame ud-background mmr-max-yo" id="nwc3l-yo-lose-map"> 0</td>
-                    <td class="table-frame ud-background mmr-av-yo" id="nwc3l-yo-av"> 0 </td>
-
-
-
+                    <td class="table-frame ud-background games-yolostime" id="nwc3l-yolo-total"> 0</td>
+                    <td class="table-frame ud-background mmr-yolostime" id="nwc3l-yolo-total"> 0</td>
+                    <td class="table-frame ud-background  mmr-min-yolostime" id="nwc3l-yo-win-map"> 0</td>
+                    <td class="table-frame ud-background mmr-max-yolostime" id="nwc3l-yo-lose-map"> 0</td>
+                    <td class="table-frame ud-background mmr-av-yolostime" id="nwc3l-yo-av"> 0 </td>
+                    <td class="table-frame ud-background mmr-me-yolostime" id="nwc3l-yo-av"> 0 </td>
 
                 </tr>
 
-                <tr>
+                <!--                 <tr>
                     <td class="table-frame hu-background "> <a class="player hum"
                             href="https://warcraft3.info/stats/player/12279" title="Shogun"> Shogun</a></td>
                     <td class="table-frame hu-background">
@@ -196,12 +198,50 @@
                         </span>
                     </td>
                     <td class="table-frame hu-background"><img src="assets/img/human.gif" class="race" alt="flag"></td>
+                    <td class="table-frame hu-background games-shogun" id="nwc3l-Shogun-total"> 0</td>
                     <td class="table-frame hu-background mmrSho" id="nwc3l-Shogun-total"> 0</td>
-                    <td class="table-frame hu-background mmr-min-sho" id="nwc3l-Shogun-win-map"> 0</td>
-                    <td class="table-frame hu-background mmr-max-sho" id="nwc3l-Shogun-lose-map"> 0</td>
-                    <td class="table-frame hu-background mmr-av-sho" id="nwc3l-Shogun-winrate"> 0 </td>
+                    <td class="table-frame hu-background mmr-min-shogun" id="nwc3l-Shogun-win-map"> 0</td>
+                    <td class="table-frame hu-background mmr-max-shogun" id="nwc3l-Shogun-lose-map"> 0</td>
+                    <td class="table-frame hu-background mmr-av-shogun" id="nwc3l-Shogun-winrate"> 0 </td>
+                    <td class="table-frame hu-background mmr-me-shogun" id="nwc3l-Shogun-winrate"> 0 </td>
 
 
+                </tr> -->
+
+
+                <tr>
+                    <td class="table-frame ne-background"> <a class="player elf"
+                            href="https://warcraft3.info/league/users/2425/Glare" title="Glare"> Glare</a>
+                    </td>
+                    <td class="table-frame ne-background">
+                        <span class="poland">PL
+                        </span>
+                    </td>
+                    <td class="table-frame ne-background"><img src="assets/img/elf.gif" class="race" alt="flag">
+                    </td>
+                    <td class="table-frame ne-background games-glare"> 0</td>
+                    <td class="table-frame ne-background mmr-glare"> 0</td>
+                    <td class="table-frame ne-background mmr-min-glare "> 0</td>
+                    <td class="table-frame ne-background mmr-max-glare"> 0</td>
+                    <td class="table-frame ne-background mmr-av-glare"> 0 </td>
+                    <td class="table-frame ne-background mmr-me-glare"> 0 </td>
+                </tr>
+                <!--                 <tr>
+                    <td></td>
+                </tr> -->
+                <tr>
+                    <td class="table-frame ne-background"><a class="player elf" href="" title="Fingon"> Fingon</a></td>
+                    <td class="table-frame ne-background">
+                        <span class="ukraine">UA </span>
+                    </td>
+                    <td class="table-frame ne-background"><img src="assets/img/elf.gif" class="race" alt="flag">
+                    </td>
+                    <td class="table-frame ne-background games-kawerorda"> 0</td>
+                    <td class="table-frame ne-background mmr-kawerorda"> 0</td>
+                    <td class="table-frame ne-background  mmr-min-kawerorda"> 0</td>
+                    <td class="table-frame ne-background mmr-max-kawerorda"> 0</td>
+                    <td class="table-frame ne-background mmr-av-kawerorda"> 0 </td>
+                    <td class="table-frame ne-background mmr-me-kawerorda"> 0 </td>
 
                 </tr>
 
@@ -215,27 +255,12 @@
                     </td>
                     <td class="table-frame ne-background"><img src="assets/img/elf.gif" class="race" alt="flag">
                     </td>
-                    <td class="table-frame ne-background mmr-tp"> 0</td>
-                    <td class="table-frame ne-background mmr-min-tp "> 0</td>
-                    <td class="table-frame ne-background mmr-max-tp"> 0</td>
-                    <td class="table-frame ne-background mmr-av-tp"> 0 </td>
-
-                </tr>
-                <tr>
-                    <td class="table-frame ne-background"> <a class="player elf"
-                            href="https://warcraft3.info/league/users/2425/Glare" title="Glare"> Glare</a>
-                    </td>
-                    <td class="table-frame ne-background">
-                        <span class="poland">PL
-                        </span>
-                    </td>
-                    <td class="table-frame ne-background"><img src="assets/img/elf.gif" class="race" alt="flag">
-                    </td>
-                    <td class="table-frame ne-background mmr-gl"> 0</td>
-                    <td class="table-frame ne-background mmr-min-gl "> 0</td>
-                    <td class="table-frame ne-background mmr-max-gl"> 0</td>
-                    <td class="table-frame ne-background mmr-av-gl"> 0 </td>
-
+                    <td class="table-frame ne-background games-poncho"> 0</td>
+                    <td class="table-frame ne-background mmr-poncho"> 0</td>
+                    <td class="table-frame ne-background mmr-min-poncho "> 0</td>
+                    <td class="table-frame ne-background mmr-max-poncho"> 0</td>
+                    <td class="table-frame ne-background mmr-av-poncho"> 0 </td>
+                    <td class="table-frame ne-background mmr-me-poncho"> 0 </td>
                 </tr>
 
 

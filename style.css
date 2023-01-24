@@ -307,6 +307,18 @@ html {
   font-size: bold;
 }
 
+.button {
+  background-color: black;
+  color: white;
+  border-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: gold;
+}
+
 @media all and (min-width: 600px) and (max-width: 740px) {
   .main__links__link {
     display: block;
