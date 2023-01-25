@@ -21,7 +21,15 @@ html {
   height: 90vh;
   background-color: black;
 }
-
+.select {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border-color: white;
+  border-radius: 5px;
+  height: 30px;
+  width: 40px;
+}
 .player {
   text-decoration: none;
   font-weight: 500;
@@ -48,6 +56,7 @@ html {
   font-size: 20px;
   color: white;
   background-color: black;
+  height: 120px;
 }
 
 .table {
@@ -313,6 +322,8 @@ html {
   border-color: white;
   border-radius: 5px;
   cursor: pointer;
+  width: 50px;
+  height: 30px;
 }
 
 .button:hover {

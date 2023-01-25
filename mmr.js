@@ -29,30 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelector(".select").value = 13;
 let s = document.querySelector(".select").value;
 
-let urlPten = `https://website-backend.w3champions.com/api/players/PteN%2321803/game-mode-stats?gateWay=20&season=${s}`;
-
-let urlillisori = `https://website-backend.w3champions.com/api/players/Illisori%232201/game-mode-stats?gateWay=20&season=${s}`;
-
-let urlDraniq = `https://website-backend.w3champions.com/api/players/draniqBLR%232779/game-mode-stats?gateWay=20&season=${s}`;
-
-let urlVama = `https://website-backend.w3champions.com/api/players/vama%2321920/game-mode-stats?gateWay=20&season=${s}`;
-
-let urlFingon = `https://website-backend.w3champions.com/api/players/KawerOrda%232648/game-mode-stats?gateWay=20&season=${s}`;
-
-let urlTrident = `https://website-backend.w3champions.com/api/players/tRid3nt%232910/game-mode-stats?gateWay=20&season=${s}`;
-
-let urlFlamy4 = `https://website-backend.w3champions.com/api/players/Flamy4%232811/game-mode-stats?gateWay=20&season=${s}`;
-
-let urlKrasik = `https://website-backend.w3champions.com/api/players/krasik%232848/game-mode-stats?gateWay=20&season=${s}`;
-
-let urlYolo = `https://website-backend.w3champions.com/api/players/Yolostime%232753/game-mode-stats?gateWay=20&season=${s}`;
-
-let urlSho = `https://website-backend.w3champions.com/api/players/Shogun%2322192/game-mode-stats?gateWay=20&season=${s}`;
-
-let urlTom = `https://website-backend.w3champions.com/api/players/TomPoncho%2321719/game-mode-stats?gateWay=20&season=${s}`;
-
-let urlGla = `https://website-backend.w3champions.com/api/players/Glare%232264/game-mode-stats?gateWay=20&season=${s}`;
-
 let pten = "PteN#21803";
 let illisori = "Illisori#2201";
 let draniq = "draniqBLR#2779";
@@ -86,7 +62,6 @@ async function showMaxMmr(tag, season, race) {
       j + "00"
     }&pageSize=100&season=${season}&gamemode=1`;
 
-    console.log(urlMax);
     const res = await fetch(urlMax);
     const data = await res.json();
 
