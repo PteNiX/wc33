@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 });
 
-document.querySelector(".select").value = 13;
+document.querySelector(".select").value = 14;
 let s = document.querySelector(".select").value;
 
 let pten = "PteN#21803";
@@ -79,6 +79,7 @@ async function showMaxMmr(tag, season, race) {
         array.push(data.matches[i].teams[1].players[0].currentMmr);
       }
     }
+    console.log(urlMax);
   }
 
   let sumOfNumbers = Math.round(
@@ -92,6 +93,13 @@ async function showMaxMmr(tag, season, race) {
   let minmmr = Math.min.apply(null, array);
 
   if (predata.count == 0) {
+    maxmmr = 0;
+    minmmr = 0;
+    aveOfSumb = 0;
+    sumOfNumbers = 0;
+  }
+
+  if (maxmmr == -Infinity) {
     maxmmr = 0;
     minmmr = 0;
     aveOfSumb = 0;
