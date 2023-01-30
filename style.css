@@ -409,12 +409,17 @@ html {
 
 @media all and (min-width: 455px) and (max-width: 599px) {
   .main__links__link {
+    position: relative;
     display: block;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 15px;
     margin-top: 5px;
     font-family: "Roboto";
+    line-height: 35px;
+  }
+
+  .links__con {
   }
 
   .arrow {
@@ -466,6 +471,7 @@ html {
     font-size: 10px;
     margin-top: 5px;
     font-family: "Roboto";
+    line-height: 35px;
   }
 
   .links__con {
@@ -526,6 +532,7 @@ html {
     font-size: 10px;
     margin-top: 5px;
     font-family: "Roboto";
+    line-height: 35px;
   }
 
   .links__con {
