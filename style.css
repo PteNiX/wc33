@@ -267,9 +267,10 @@ html {
 }
 
 .links__con {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0, 0.6);
+  width: 120%;
   height: 40px;
-  width: 70%;
+
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
@@ -280,9 +281,22 @@ html {
     contrast(87%);
 }
 .main-page {
-  background-image: url(/wc33/assets/img/bg.jpg);
+  background-image: url(/wc33/assets/img/background1.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 80vh;
+  animation: zoom-out 12s linear infinite;
+  width: 120%;
+}
+
+.container {
+  overflow: hidden;
+}
+@keyframes zoom-out {
+  100% {
+    width: 100%;
+  }
 }
 
 .bg2 {
@@ -300,9 +314,17 @@ html {
   height: 420px;
 }
 
+.fixed-main {
+  position: fixed;
+
+  width: 100%;
+}
+
 .links-nav {
   position: relative;
   align-items: center;
+
+  margin: auto;
 }
 
 .russia {
