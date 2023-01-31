@@ -116,8 +116,19 @@ html {
 
 .table-title {
   font-family: "DelaGothicOne";
-  margin: auto;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  animation: fadeIn 3s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .table-frame {
@@ -254,12 +265,16 @@ html {
   text-align: center;
   row-gap: 40px;
   width: 100%;
+  top: -5%;
+  left: -3%;
 }
 
 .main__links__link {
   display: block;
   text-decoration: none;
   color: #a38a00;
+  text-shadow: 4px 3px 2px black;
+
   font-size: 25px;
   margin-top: 5px;
   font-family: "Righteous";
@@ -274,9 +289,15 @@ html {
   border-radius: 4px;
 }
 
+.links__con:hover {
+  box-shadow: 0 0 15px #fdf913;
+}
+
 .main__links__link:hover {
-  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
+  /* filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%); */
+  transition: 0.2s;
+  color: rgb(226, 213, 26);
 }
 .main-page {
   background-image: url(/wc33/assets/img/background1.jpg);
@@ -310,6 +331,7 @@ html {
   width: 100%;
   height: 80vh;
   display: flex;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
 }
@@ -393,10 +415,8 @@ html {
   .main__links__link {
     display: block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
     font-size: 20px;
     margin-top: 5px;
-    font-family: "Roboto";
   }
 
   .arrow {
@@ -429,10 +449,8 @@ html {
     position: relative;
     display: block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
     font-size: 15px;
     margin-top: 5px;
-    font-family: "Roboto";
     line-height: 35px;
   }
 
@@ -481,10 +499,10 @@ html {
   .main__links__link {
     display: block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+
     font-size: 10px;
     margin-top: 5px;
-    font-family: "Roboto";
+
     line-height: 35px;
   }
 
@@ -542,10 +560,10 @@ html {
   .main__links__link {
     display: block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    /*  color: rgb(255, 255, 255); */
     font-size: 10px;
     margin-top: 5px;
-    font-family: "Roboto";
+
     line-height: 35px;
   }
 
