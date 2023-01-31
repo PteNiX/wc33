@@ -20,6 +20,15 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Anton";
+  src: url("assets/fonts/Anton/Anton-Regular.ttf");
+  font-weight: 400;
+}
+
+.body {
+  background-color: black;
+}
 html {
   scroll-behavior: smooth;
   height: 100%;
