@@ -51,6 +51,7 @@ html {
   background-repeat: no-repeat;
   background-position: cover;
   background-position: bottom;
+  background-color: #000000;
 }
 .select {
   cursor: pointer;
@@ -343,7 +344,11 @@ html {
 }
 
 .mmr-page {
-  background-color: black;
+  height: 90vh;
+  background: url(/wc33/assets/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-position: bottom;
 }
 
 .fixed-main {
