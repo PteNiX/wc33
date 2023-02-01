@@ -1,0 +1,27 @@
+{
+  "name": "wc33",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ajv": "^6.12.6",
+    "glob": "^7.2.3",
+    "json-stable-stringify-without-jsonify": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PteNiX/wc33.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PteNiX/wc33/issues"
+  },
+  "homepage": "https://github.com/PteNiX/wc33#readme"
+}
