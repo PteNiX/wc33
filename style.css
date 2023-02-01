@@ -49,8 +49,8 @@ html {
   background: url(/wc33/assets/img/bg.jpg);
   height: 80vh;
   background-repeat: no-repeat;
-  background-position: cover;
   background-position: bottom;
+  background-size: cover;
   background-color: #000000;
 }
 .select {
