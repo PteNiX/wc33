@@ -347,7 +347,7 @@ html {
   height: 90vh;
   background: url(/wc33/assets/img/bg.jpg);
   background-repeat: no-repeat;
-  background-position: cover;
+  background-size: cover;
   background-position: bottom;
 }
 
