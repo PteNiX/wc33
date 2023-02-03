@@ -81,7 +81,7 @@ html {
   background-color: black;
   border-radius: 50%;
   left: 10px;
-  top: 10px;
+  /*   top: 10px; */
   cursor: pointer;
 }
 .arrow:after {
@@ -95,6 +95,10 @@ html {
   border-left: 3px solid white;
   border-bottom: 3px solid white;
   transform: rotate(45deg);
+}
+
+.arrow-mmr {
+  top: 10px;
 }
 
 .arrow:hover {
@@ -434,6 +438,7 @@ html {
 }
 .header-mmr {
   display: flex;
+  align-items: center;
 }
 
 @media all and (min-width: 600px) and (max-width: 740px) {
