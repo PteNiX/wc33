@@ -1,3 +1,7 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 @font-face {
   font-family: "DelaGothicOne";
   src: url("assets/fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf");
@@ -10,26 +14,99 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Righteous";
+  src: url("assets/fonts/Righteous/Righteous-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Anton";
+  src: url("assets/fonts/Anton/Anton-Regular.ttf");
+  font-weight: 400;
+}
+
+.body {
+  background-color: black;
+}
 html {
   scroll-behavior: smooth;
   height: 100%;
 }
 
+.super-container {
+  height: 100vh;
+}
+
 .main {
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
-  height: 90vh;
+
   background-color: black;
 }
 
+.main-container {
+  background: url(/wc33/assets/img/bg.jpg);
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-color: #000000;
+}
+.select {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border-color: white;
+  border-radius: 5px;
+  height: 30px;
+  width: 40px;
+}
 .player {
   text-decoration: none;
   font-weight: 500;
   font-family: "Roboto";
 }
 
-.orc {
-  color: rgb(51, 3, 3);
+.long-title {
+  background-color: #000000;
+  color: white;
+  height: 10vh;
+}
+.arrow {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 3px solid white;
+  background-color: black;
+  border-radius: 50%;
+  left: 10px;
+  /*   top: 10px; */
+  cursor: pointer;
+}
+.arrow:after {
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(45deg);
+}
+
+.arrow-mmr {
+  top: 10px;
+}
+
+.arrow:hover {
+  border-color: #a38a00;
+}
+
+.arrow:hover::after {
+  border-color: #a38a00;
 }
 
 .elf {
@@ -48,21 +125,39 @@ html {
   font-size: 20px;
   color: white;
   background-color: black;
+  height: 90px;
+}
+
+.caption-index {
+  line-height: 100px;
 }
 
 .table {
   width: 100%;
   height: 200px;
   text-align: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.p2n {
+  color: #a38a00;
 }
 
 .table-title {
   font-family: "DelaGothicOne";
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  animation: fadeIn 3s ease-out;
 }
 
-.table-title:hover {
-  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .table-frame {
@@ -73,26 +168,18 @@ html {
   cursor: pointer;
   font-family: "Roboto";
 }
-.table {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-.flag {
-  width: 30px;
-  height: 20px;
-}
 
 .footer-con {
   width: 100%;
 
-  height: 60px;
+  height: 10vh;
   background-color: black;
   display: flex;
   justify-content: space-between;
 
   background-repeat: no-repeat;
   background-position: center 0;
+  align-items: center;
 }
 
 .footer-data {
@@ -108,21 +195,13 @@ html {
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-
   color: #ffffff;
-
   padding-left: 0px;
   transition: 0.3s;
 }
 
-.copy:hover {
-  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
-}
-
 .hu-background {
   background-color: rgb(224, 255, 255);
-  
 }
 
 .oc-background {
@@ -140,7 +219,7 @@ html {
 }
 
 .logo {
-  width: 50%;
+  width: 40px;
   height: 50px;
   cursor: pointer;
   margin-right: 40px;
@@ -206,42 +285,62 @@ html {
 
 .main__links {
   position: relative;
-  top: 150px;
   display: flex;
   flex-direction: column;
   text-align: center;
-
   row-gap: 40px;
   width: 100%;
-  height: 530px;
+  top: -5%;
+  left: -3%;
 }
 
 .main__links__link {
   display: block;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #a38a00;
+  text-shadow: 4px 3px 2px black;
+
   font-size: 25px;
   margin-top: 5px;
-  font-family: "Roboto";
+  font-family: "Righteous";
 }
 
 .links__con {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0, 0.6);
+  width: 120%;
   height: 40px;
-  width: 70%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
 }
 
+.links__con:hover {
+  box-shadow: 0 0 15px #fdf913;
+}
+
 .main__links__link:hover {
-  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
+  /* filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%); */
+  transition: 0.2s;
+  color: rgb(226, 213, 26);
 }
 .main-page {
-  background-image: url(/wc33/assets/img/bg.jpg);
+  background-image: url(/wc33/assets/img/background1.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 80vh;
+  animation: zoom-out 12s linear infinite;
+  width: 120%;
+}
+
+.container {
+  overflow: hidden;
+}
+@keyframes zoom-out {
+  100% {
+    width: 100%;
+  }
 }
 
 .bg2 {
@@ -249,14 +348,27 @@ html {
 }
 
 .mmr-page {
-  background-color: black;
+  height: 90vh;
+  background: url(/wc33/assets/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
-.main__links {
+.fixed-main {
+  position: fixed;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.links-nav {
   position: relative;
-  top: 0px;
-  padding-top: 100px;
-  height: 420px;
+  align-items: center;
+  margin: auto;
 }
 
 .russia {
@@ -264,81 +376,271 @@ html {
   font-size: bold;
 }
 
-.russia:hover {
+/* .russia:hover {
   color: rgb(255, 255, 255);
   font-size: bold;
 }
-
+ */
 .belarus {
   color: rgb(204 0 0);
   font-size: bold;
 }
 
-.belarus:hover {
+/* .belarus:hover {
   color: rgb(255, 255, 255);
   font-size: bold;
-}
+} */
 
 .ukraine {
-  color: rgb(	0, 87, 184);
+  color: rgb(0, 87, 184);
   font-size: bold;
 }
 
-.ukraine:hover {
-  
+/* .ukraine:hover {
   color: rgb(255, 215, 0);
-}
+} */
 
-.kyrgyzstan{
+.kyrgyzstan {
   color: rgb(255, 0, 0);
   font-size: bold;
 }
 
-.kyrgyzstan:hover{
-  color: rgb(255, 255 ,0);
+/* .kyrgyzstan:hover {
+  color: rgb(255, 255, 0);
+  font-size: bold;
+} */
+
+.poland {
+  color: #d4213d;
   font-size: bold;
 }
 
+/* .poland:hover {
+  color: #e9e8e7;
+  font-size: bold;
+} */
 
+.button {
+  background-color: black;
+  color: white;
+  border-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+}
+
+.button:hover {
+  color: #a38a00;
+}
+.header {
+  height: 10vh;
+}
+.header-mmr {
+  display: flex;
+  align-items: center;
+}
 
 @media all and (min-width: 600px) and (max-width: 740px) {
   .main__links__link {
     display: block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
     font-size: 20px;
     margin-top: 5px;
-    font-family: "Roboto";
+  }
+
+  .arrow {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    background-color: black;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .arrow:after {
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
   }
 }
 
 @media all and (min-width: 455px) and (max-width: 599px) {
   .main__links__link {
+    position: relative;
     display: block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
     font-size: 15px;
     margin-top: 5px;
-    font-family: "Roboto";
+    line-height: 35px;
+  }
+
+  .arrow {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    background-color: black;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .arrow:after {
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+  }
+
+  .table-title {
+    font-size: 15px;
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  .tbody {
+    font-size: 13px;
+  }
+
+  .thead {
+    font-size: 13px;
   }
 }
 
-@media all and (max-width: 454px) {
+@media all and (min-width: 381px) and (max-width: 454px) {
   .main__links__link {
     display: block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+
     font-size: 10px;
     margin-top: 5px;
-    font-family: "Roboto";
+
+    line-height: 35px;
   }
 
   .links__con {
     background-color: rgb(0, 0, 0);
     height: 30px;
-    width: 70%;
+
     margin-left: auto;
     margin-right: auto;
     border-radius: 4px;
+  }
+
+  .arrow {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    background-color: black;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .arrow:after {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+  }
+
+  .table-title {
+    font-size: 13px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  .tbody {
+    font-size: 11px;
+  }
+
+  .thead {
+    font-size: 11px;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .main__links__link {
+    display: block;
+    text-decoration: none;
+    /*  color: rgb(255, 255, 255); */
+    font-size: 10px;
+    margin-top: 5px;
+
+    line-height: 35px;
+  }
+
+  .links__con {
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+  }
+
+  .arrow {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    background-color: black;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .arrow:after {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+  }
+
+  .table-title {
+    font-size: 11px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  .tbody {
+    font-size: 10px;
+  }
+
+  .thead {
+    font-size: 10px;
   }
 }
