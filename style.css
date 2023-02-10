@@ -67,6 +67,10 @@ html {
   font-weight: 500;
   font-family: "Roboto";
 }
+.player:hover {
+  color: rgb(255, 0, 43);
+  text-shadow: 1px 1px 1px white;
+}
 
 .long-title {
   background-color: #000000;
