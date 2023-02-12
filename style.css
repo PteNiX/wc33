@@ -53,6 +53,12 @@ html {
   background-size: cover;
   background-color: #000000;
 }
+
+th {
+  color: white;
+  text-shadow: 0 1px 1px #000000;
+  padding: 10px 20px;
+}
 .select {
   cursor: pointer;
   background-color: black;
@@ -66,6 +72,8 @@ html {
   text-decoration: none;
   font-weight: 500;
   font-family: "Roboto";
+  text-shadow: 1px 1px 1px #ffffff;
+  color: #000000;
 }
 .player:hover {
   color: rgb(255, 0, 43);
@@ -168,9 +176,11 @@ html {
   border: 1px solid black;
 }
 .table-minititle {
-  background-color: white;
+  background-color: rgb(61, 8, 66);
   cursor: pointer;
   font-family: "Roboto";
+  border-color: rgb(255, 255, 255);
+  border-width: 1px 1px 1px 0;
 }
 
 .footer-con {
