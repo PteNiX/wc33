@@ -27,7 +27,11 @@ const img3 = (back.style.background =
 const img4 = (back.style.background =
   "url('/wc33/assets/img/background1.jpg') no-repeat center ");
 
-let i = 0;
+function randomInteger(min, max) {
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+let i = randomInteger(0, 3);
 function change() {
   var images = [img1, img2, img3, img4];
   back.style.background = images[i];
