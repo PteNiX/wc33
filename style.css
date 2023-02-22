@@ -472,7 +472,7 @@ th {
     background-color: black;
     border-radius: 50%;
     left: 10px;
-    top: 10px;
+    top: 5px;
     cursor: pointer;
   }
   .arrow:after {
@@ -486,6 +486,9 @@ th {
     border-left: 3px solid white;
     border-bottom: 3px solid white;
     transform: rotate(45deg);
+  }
+  .table-title {
+    font-size: 13px;
   }
 }
 
@@ -501,30 +504,30 @@ th {
 
   .arrow {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
     border: 3px solid white;
     background-color: black;
     border-radius: 50%;
     left: 10px;
-    top: 10px;
+    top: 5px;
     cursor: pointer;
   }
   .arrow:after {
     position: absolute;
-    top: 9px;
-    left: 12px;
+    top: 5px;
+    left: 7px;
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     border-left: 3px solid white;
     border-bottom: 3px solid white;
     transform: rotate(45deg);
   }
 
   .table-title {
-    font-size: 15px;
+    font-size: 10.5px;
   }
 
   label {
@@ -567,7 +570,7 @@ th {
     background-color: black;
     border-radius: 50%;
     left: 10px;
-    top: 10px;
+    top: 5px;
     cursor: pointer;
   }
   .arrow:after {
@@ -584,7 +587,7 @@ th {
   }
 
   .table-title {
-    font-size: 13px;
+    font-size: 10px;
   }
 
   label {
@@ -626,7 +629,7 @@ th {
     background-color: black;
     border-radius: 50%;
     left: 10px;
-    top: 10px;
+    top: 5px;
     cursor: pointer;
   }
   .arrow:after {
