@@ -69,6 +69,12 @@ th {
   height: 30px;
   width: 40px;
 }
+
+.select:hover {
+  color: #a38a00;
+  box-shadow: 0 0 8px #a38a00;
+}
+
 .player {
   text-decoration: none;
   font-weight: 500;
@@ -447,6 +453,7 @@ th {
 
 .button:hover {
   color: #a38a00;
+  box-shadow: 0 0 8px #a38a00;
 }
 .header {
   height: 10vh;
