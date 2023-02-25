@@ -122,6 +122,7 @@ th {
 
 .arrow:hover {
   border-color: #a38a00;
+  box-shadow: 0 0 10px #a38a00;
 }
 
 .arrow:hover::after {
