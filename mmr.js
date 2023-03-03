@@ -151,7 +151,6 @@ showMaxMmr(vama, s, 8);
 showMaxMmr(fingon, s, 4);
 showMaxMmr(krasik, s, 4);
 showMaxMmr(yolostime, s, 8);
-showMaxMmr(poncho, s, 4);
 showMaxMmr(shogun, s, 1);
 showMaxMmr(glare, s, 4);
 showMaxMmr(commutation, s, 2);
@@ -166,7 +165,6 @@ function changeSeason() {
   showMaxMmr(fingon, s, 4);
   showMaxMmr(krasik, s, 4);
   showMaxMmr(yolostime, s, 8);
-  showMaxMmr(poncho, s, 4);
   showMaxMmr(shogun, s, 1);
   showMaxMmr(glare, s, 4);
   showMaxMmr(commutation, s, 2);
