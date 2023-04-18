@@ -41,6 +41,7 @@ let poncho = "Poncho#21692";
 let glare = "Glare#2264";
 let fingon = "KawerOrda#2648";
 let commutation = "Commutation#2393";
+let dash = "DasH#21453";
 
 async function showMaxMmr(tag, season, race) {
   let preUrlMax = `https://website-backend.w3champions.com/api/matches/search?playerId=${tag
@@ -154,6 +155,7 @@ showMaxMmr(yolostime, s, 8);
 showMaxMmr(shogun, s, 1);
 showMaxMmr(glare, s, 4);
 showMaxMmr(commutation, s, 2);
+showMaxMmr(dash, s, 2);
 
 function changeSeason() {
   s = document.querySelector(".select").value;
@@ -168,6 +170,7 @@ function changeSeason() {
   showMaxMmr(shogun, s, 1);
   showMaxMmr(glare, s, 4);
   showMaxMmr(commutation, s, 2);
+  showMaxMmr(dash, s, 2);
 }
 
 let show = document.querySelector(".button");

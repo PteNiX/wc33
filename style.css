@@ -408,11 +408,6 @@ th {
   font-size: bold;
 }
 
-/* .belarus:hover {
-  color: rgb(255, 255, 255);
-  font-size: bold;
-} */
-
 .ukraine {
   color: rgb(0, 87, 184);
   font-size: bold;
@@ -431,6 +426,10 @@ th {
   color: rgb(255, 255, 0);
   font-size: bold;
 } */
+.kazakhstan {
+  color: rgb(0, 171, 194);
+  font-size: bold;
+}
 
 .poland {
   color: #d4213d;
