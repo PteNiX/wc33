@@ -22,14 +22,6 @@ for (let i = 0; i < nwc3lTotal.length; i++) {
   );
 }
 
-// return
-
-/* for (let j = 0; j < allEasy.length; j++) {
-  document.querySelectorAll(".all-games")[j].innerHTML = allEasy[j];
-}
- */
-//nwc3l winrate
-
 let nwc3lWinMap = document.querySelectorAll(".nwc3l-win-map");
 let nwc3lLoseMap = document.querySelectorAll(".nwc3l-lose-map");
 
@@ -65,82 +57,6 @@ for (let k = 0; k < allEasy.length; k++) {
     document.querySelectorAll(".nwc3l-winrate")[k].innerHTML = 0 + "%";
   }
 }
-
-//master winrate
-
-/* let masterWinMap = document.querySelectorAll(".master-win-map");
-let masterLoseMap = document.querySelectorAll(".master-lose-map");
-
-let masterWinMapEasy = new Array(masterWinMap.length);
-let masterLoseMapEasy = new Array(masterLoseMap.length); */
-
-//into innerhtml
-/* for (let i = masterWinMap.length; i--; ) {
-  masterWinMapEasy[i] = masterWinMap[i].innerHTML;
-}
-
-for (let i = masterLoseMap.length; i--; ) {
-  masterLoseMapEasy[i] = masterLoseMap[i].innerHTML;
-} */
-
-//sum
-
-/* let sumMasterMaps = [];
-
-for (let i = 0; i < masterWinMap.length; i++) {
-  sumMasterMaps.push(
-    parseInt(masterWinMapEasy[i], 10) + parseInt(masterLoseMapEasy[i], 10)
-  );
-} */
-
-// return
-
-/* for (let k = 0; k < allEasy.length; k++) {
-  if (sumMasterMaps[k] != 0) {
-    document.querySelectorAll(".master-winrate")[k].innerHTML =
-      Math.round((masterWinMapEasy[k] / sumMasterMaps[k]) * 100) + "%";
-  } else {
-    document.querySelectorAll(".master-winrate")[k].innerHTML = 0 + "%";
-  }
-} */
-
-//Total winrate
-
-/* let totalWinMap = [];
-let totalLoseMap = [];
-let totalMap = []; */
-
-/* for (let i = 0; i < masterWinMap.length; i++) {
-  totalWinMap.push(
-    parseInt(masterWinMapEasy[i], 10) + parseInt(nwc3lWinMapEasy[i], 10)
-  );
-  totalLoseMap.push(
-    parseInt(masterLoseMapEasy[i], 10) + parseInt(nwc3lLoseMapEasy[i], 10)
-  );
-  totalMap.push(parseInt(totalWinMap[i], 10) + parseInt(totalLoseMap[i], 10));
-}
- */
-//Total maps
-/* for (let j = 0; j < allEasy.length; j++) {
-  document.querySelectorAll(".all-win-map")[j].innerHTML = totalWinMap[j];
-}
-
-for (let j = 0; j < allEasy.length; j++) {
-  document.querySelectorAll(".all-lose-map")[j].innerHTML = totalLoseMap[j];
-} */
-
-// return
-
-/* for (let k = 0; k < totalWinMap.length; k++) {
-  if (totalMap[k] != 0) {
-    document.querySelectorAll(".total-winrate")[k].innerHTML =
-      Math.round((totalWinMap[k] / totalMap[k]) * 100) + "%";
-  } else {
-    document.querySelectorAll(".total-winrate")[k].innerHTML = 0 + "%";
-  }
-} */
-
-//sort by
 
 document.addEventListener("DOMContentLoaded", () => {
   const getSort = ({ target }) => {
