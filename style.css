@@ -423,6 +423,11 @@ th {
     font-size: bold;
 }
 
+.serbia {
+    color: rgb(199, 54, 61);
+    font-size: bold;
+}
+
 .button {
     background-color: black;
     color: white;
