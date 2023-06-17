@@ -54,7 +54,11 @@ html {
     background-color: #000000;
 }
 
-.total-score {
+.total-score,
+.day1,
+.day2,
+.day3,
+.day4 {
     width: 90%;
     margin: auto;
     position: relative;
@@ -65,11 +69,62 @@ html {
     justify-content: space-around;
 }
 
+.day1,
+.day2,
+.day3,
+.day4 {
+    flex-direction: column;
+    top: 40px;
+    align-items: center;
+}
+
+.day2 {
+    top: 60px;
+}
+.day3 {
+    top: 80px;
+}
+.day4 {
+    top: 100px;
+}
+
 .total-score-orc,
 .total-score-elf,
 .total-colon,
 .race-racewars {
     font-size: 30px;
+}
+
+.game-score-orc,
+.game-score-elf,
+.game-colon,
+.game-racewars {
+    font-size: 20px;
+}
+
+.race-game {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.game-racewars {
+    position: relative;
+    width: 150px;
+    text-align: center;
+}
+.game-score-orc,
+.game-score-elf {
+    position: relative;
+    width: 15px;
+    margin: auto;
+    text-align: center;
+}
+.race-race-war {
+    position: relative;
+    margin: auto;
+    width: 40px;
+    height: 15px;
 }
 th {
     color: white;
