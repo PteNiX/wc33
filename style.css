@@ -110,7 +110,7 @@ html {
 }
 .game-racewars {
     position: relative;
-    width: 150px;
+    width: 140px;
     text-align: center;
 }
 .game-score-orc,
@@ -125,6 +125,11 @@ html {
     margin: auto;
     width: 40px;
     height: 15px;
+}
+
+.race-race-war-big {
+    width: 50px;
+    height: 50px;
 }
 th {
     color: white;
@@ -455,6 +460,7 @@ th {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+    overflow-y: scroll;
 }
 
 .fixed-main {
@@ -532,6 +538,12 @@ th {
         font-size: 20px;
         margin-top: 5px;
     }
+    .race-game {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
 
     .arrow {
         position: relative;
@@ -569,6 +581,9 @@ th {
         font-size: 15px;
         margin-top: 5px;
         line-height: 35px;
+    }
+    .race-game {
+        width: 100%;
     }
 
     .arrow {
@@ -621,6 +636,9 @@ th {
         margin-top: 5px;
 
         line-height: 35px;
+    }
+    .race-game {
+        width: 100%;
     }
 
     .links__con {
@@ -681,6 +699,9 @@ th {
         margin-top: 5px;
 
         line-height: 35px;
+    }
+    .race-game {
+        width: 100%;
     }
 
     .links__con {
