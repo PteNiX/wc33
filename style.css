@@ -54,6 +54,23 @@ html {
     background-color: #000000;
 }
 
+.total-score {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 20px;
+    background-color: rgba(255, 255, 255, 0.452);
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+.total-score-orc,
+.total-score-elf,
+.total-colon,
+.race-racewars {
+    font-size: 30px;
+}
 th {
     color: white;
     text-shadow: 0 1px 1px #000000;
@@ -372,6 +389,14 @@ th {
 .mmr-page {
     height: 90vh;
     background: url(/wc33/assets/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.racewar-page {
+    height: 90vh;
+    background: url(/wc33/assets/img/orcelf.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
