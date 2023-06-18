@@ -54,6 +54,7 @@ html {
     background-color: #000000;
 }
 
+/* race wars page  */
 .total-score,
 .day1,
 .day2,
@@ -96,6 +97,11 @@ html {
     margin: auto;
 }
 
+.race-racewars {
+    width: 150px;
+    text-align: center;
+}
+
 .game-score-orc,
 .game-score-elf,
 .game-colon,
@@ -132,6 +138,7 @@ html {
     width: 50px;
     height: 50px;
 }
+
 th {
     color: white;
     text-shadow: 0 1px 1px #000000;
@@ -587,6 +594,10 @@ th {
         width: 100%;
     }
 
+    .race-racewars {
+        width: 70px;
+    }
+
     .arrow {
         position: relative;
         width: 22px;
@@ -640,6 +651,10 @@ th {
     }
     .race-game {
         width: 100%;
+    }
+
+    .race-racewars {
+        width: 70px;
     }
 
     .links__con {
@@ -703,6 +718,10 @@ th {
     }
     .race-game {
         width: 100%;
+    }
+
+    .race-racewars {
+        width: 70px;
     }
 
     .links__con {
