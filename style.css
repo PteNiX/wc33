@@ -116,7 +116,7 @@ html {
 .game-score-elf,
 .game-colon,
 .game-racewars {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .race-game {
@@ -127,7 +127,7 @@ html {
 }
 .game-racewars {
     position: relative;
-    width: 140px;
+    width: 160px;
     text-align: center;
 }
 .game-score-orc,
@@ -144,9 +144,10 @@ html {
     height: 15px;
 }
 
-.race-race-war-big {
+.race-war-img-big {
     width: 50px;
     height: 50px;
+    margin: auto;
 }
 
 th {
@@ -550,6 +551,11 @@ th {
     align-items: center;
 }
 
+@media all and (min-width: 740px) and (max-width: 900px) {
+    .race-game {
+        width: 100%;
+    }
+}
 @media all and (min-width: 600px) and (max-width: 740px) {
     .main__links__link {
         display: block;
@@ -609,6 +615,21 @@ th {
         width: 70px;
     }
 
+    .total-score-orc,
+    .total-score-elf,
+    .total-colon,
+    .race-racewars {
+        font-size: 22px;
+        margin: auto;
+    }
+
+    .game-score-orc,
+    .game-score-elf,
+    .game-colon,
+    .game-racewars {
+        font-size: 15px;
+    }
+
     .arrow {
         position: relative;
         width: 22px;
@@ -666,6 +687,20 @@ th {
 
     .race-racewars {
         width: 70px;
+    }
+
+    .total-score-orc,
+    .total-score-elf,
+    .total-colon,
+    .race-racewars {
+        font-size: 20px;
+        margin: auto;
+    }
+    .game-score-orc,
+    .game-score-elf,
+    .game-colon,
+    .game-racewars {
+        font-size: 13px;
     }
 
     .links__con {
@@ -733,6 +768,21 @@ th {
 
     .race-racewars {
         width: 70px;
+    }
+
+    .total-score-orc,
+    .total-score-elf,
+    .total-colon,
+    .race-racewars {
+        font-size: 18px;
+        margin: auto;
+    }
+
+    .game-score-orc,
+    .game-score-elf,
+    .game-colon,
+    .game-racewars {
+        font-size: 11px;
     }
 
     .links__con {
