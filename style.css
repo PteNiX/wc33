@@ -55,6 +55,16 @@ html {
 }
 
 /* race wars page  */
+
+.green-color {
+    color: #21d489;
+    text-shadow: 1px 1px #000000;
+}
+
+.red-color {
+    color: #b32b3f;
+    text-shadow: 1px 1px #000000;
+}
 .total-score,
 .day1,
 .day2,
@@ -463,6 +473,7 @@ th {
 }
 
 .racewar-page {
+    font-family: "DelaGothicOne";
     height: 90vh;
     background: url(/wc33/assets/img/orcelf.png);
     background-repeat: no-repeat;
