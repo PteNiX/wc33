@@ -65,6 +65,11 @@ html {
     color: #b32b3f;
     text-shadow: 1px 1px #000000;
 }
+
+.blue-color {
+    color: rgb(3, 167, 196);
+    text-shadow: 1px 1px #000000;
+}
 .total-score,
 .day1,
 .day2,
