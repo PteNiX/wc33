@@ -201,7 +201,6 @@ th {
     background-color: black;
     border-radius: 50%;
     left: 10px;
-    /*   top: 10px; */
     cursor: pointer;
 }
 .arrow:after {
