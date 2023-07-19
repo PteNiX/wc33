@@ -37,7 +37,6 @@ html {
 .super-container {
     height: 100vh;
 }
-
 .main {
     overflow: auto;
     width: 100%;
