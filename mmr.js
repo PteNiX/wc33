@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 });
 
-document.querySelector(".select").value = 15;
+document.querySelector(".select").value = 16;
 let s = document.querySelector(".select").value;
 
 let pten = "PteN#21803";
