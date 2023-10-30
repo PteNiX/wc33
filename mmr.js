@@ -44,6 +44,7 @@ let commutation = "Commutation#2393";
 let dash = "DasH#21453";
 let hastur = "Hastur#21202";
 let marsone = "Marsone#21226";
+let linjunjie = "Casfan#31609";
 
 async function showMaxMmr(tag, season, race) {
     let preUrlMax = `https://website-backend.w3champions.com/api/matches/search?playerId=${tag
@@ -160,6 +161,7 @@ showMaxMmr(commutation, s, 2);
 showMaxMmr(dash, s, 2);
 showMaxMmr(hastur, s, 4);
 showMaxMmr(marsone, s, 1);
+showMaxMmr(linjunjie, s, 4);
 
 function changeSeason() {
     s = document.querySelector(".select").value;
@@ -177,6 +179,7 @@ function changeSeason() {
     showMaxMmr(dash, s, 2);
     showMaxMmr(hastur, s, 4);
     showMaxMmr(marsone, s, 1);
+    showMaxMmr(linjunjie, s, 4);
 }
 
 let show = document.querySelector(".button");
