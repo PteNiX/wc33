@@ -4,6 +4,8 @@ let nwc3lTotalM = document.querySelectorAll(".nwc3l-totalM");
 let nwc3lTotalEasy = new Array(nwc3lTotal.length);
 let nwc3lTotalEasyM = new Array(nwc3lTotalM.length);
 
+console.log(document.querySelectorAll(".total-winrate"));
+
 //into innerhtml
 for (let i = nwc3lTotal.length; i--; ) {
     nwc3lTotalEasy[i] = nwc3lTotal[i].innerHTML;
